@@ -2,6 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lalan Print Hub - Final</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f8fafc}.top{background:white;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.06);position:sticky;top:0;z-index:50}
+.logo{font-weight:900;font-size:18px;color:#1e40af}.search{max-width:900px;margin:16px auto;padding:0 14px}
+.search input{width:100%;padding:14px 18px;border-radius:28px;border:1px solid #e2e8f0;box-shadow:0 4px 14px rgba(0,0,0,.06);outline:none}
+.wrap{max-width:1300px;margin:auto;padding:0 10px 80px}.stitle{font-size:15px;font-weight:800;margin:24px 0 12px;border-left:4px solid #2563eb;padding-left:10px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{background:white;border-radius:18px;padding:16px 6px;text-align:center;border:1px solid #dcfce7;position:relative;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}
+.card h3{font-size:11px;font-weight:700}.badge{position:absolute;top:6px;right:6px;font-size:7px;padding:3px 6px;border-radius:12px;color:#fff}.new{background:#22c55e}.hot{background:#ef4444}.lock{position:absolute;top:6px;left:6px;font-size:11px}
+@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:200;align-items:flex-start;justify-content:center;padding:20px 10px;overflow:auto}
+#modal.show{display:flex}.mbox{background:white;width:100%;max-width:720px;border-radius:20px;padding:18px}
+.btn{padding:11px 16px;background:#2563eb;color:white;border:none;border-radius:10px;cursor:pointer;font-weight:700}
+input,textarea{width:100%;padding:12px;border:1px solid #e2e8f0;border-radius:10px;margin:6px 0}
+canvas{max-width:100%;border:2px dashed #2563eb;border-radius:12px;margin:10px 0}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo">🖨️ LALAN PRINT HUB</div><div>Cyber Cafe</div></div>
+<div class="search"><input id="searchBox" onkeyup="let v=this.value.toLowerCase();document.querySelectorAll('.srv').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(v)?'':'none')" placeholder="🔎 Search..."></div>
+<div class="wrap">
+
+<!-- YEH SABSE UPAR WALA SECTION HAI - JO AAP ADD KARNA CHAHTE THE -->
+<div class="stitle" style="border-color:#22c55e;background:#f0fdf4;padding:10px;border-radius:8px">⭐ Featured - Sabse Upar Wala</div>
+<div class="grid">
+<div class="card srv" onclick="openTool('Special Offer 50% OFF')" style="border:2px solid #22c55e;background:#f0fdf4"><span class="badge new">NEW</span><div style="font-size:36px">🎉</div><h3>Special Offer 50% OFF</h3></div>
+<div class="card srv" onclick="openTool('WhatsApp Contact')" style="border:2px solid #25D366"><div style="font-size:36px">💬</div><h3>WhatsApp Contact</h3></div>
+<div class="card srv" onclick="openTool('Visit Shop')" style="border:2px solid #2563eb"><div style="font-size:36px">📍</div><h3>Karjara Shop</h3></div>
+</div>
+
+<div class="stitle">Essential & Services</div>
+<div class="grid">
+<div class="card srv" onclick="openTool('Latest Jobs')"><span class="badge new">NEW</span>💼<h3>Latest Jobs</h3></div>
+<div class="card srv" onclick="openTool('Mock Test')"><span class="badge new">NEW</span>📝<h3>Mock Test</h3></div>
+<div class="card srv" onclick="openTool('ID Card Print')">🪪<h3>ID Card Print</h3></div>
+<div class="card srv" onclick="openTool('Passport Photo')">👩<h3>Passport Photo</h3></div>
+<div class="card srv" onclick="openTool('JPG To PDF')">📄<h3>JPG To PDF</h3></div>
+<div class="card srv" onclick="openTool('Resume/CV')">📄<h3>Resume/CV</h3></div>
+</div>
+
+<div class="stitle" style="border-color:#10b981">Card Printing Services</div>
+<div class="grid">
+<div class="card srv" onclick="openTool('Unique ID Card Print')"><span class="lock">🔒</span><span class="badge hot">HOT</span>👆<h3>Unique ID Card Print</h3></div>
+<div class="card srv" onclick="openTool('Election Card Print')">🗳️<h3>Election Card Print</h3></div>
+<div class="card srv" onclick="openTool('PAN Card Service')">💳<h3>PAN Card Service</h3></div>
+<div class="card srv" onclick="openTool('Aadhaar Service')">🆔<h3>Aadhaar Service</h3></div>
+</div>
+
+</div>
+<div id="modal" onclick="if(event.target.id==='modal')this.classList.remove('show')"><div class="mbox"><div style="display:flex;justify-content:space-between"><h3 id="mTitle">Tool</h3><button onclick="document.getElementById('modal').classList.remove('show')">✕ Close</button></div><div id="mBody" style="margin-top:12px"></div></div></div>
+
+<script>
+function openTool(n){
+document.getElementById('mTitle').innerText=n;
+let h=`<p><b>${n}</b> is working!</p><input type="file"><button class="btn" onclick="alert('Done!')">Process</button>`;
+if(n.includes('JPG To PDF')){h=`<input type="file" id="imgIn" accept="image/*"><button class="btn" onclick="let f=imgIn.files[0];let r=new FileReader();r.onload=e=>{let {jsPDF}=window.jspdf;let d=new jsPDF();d.addImage(e.target.result,'JPEG',10,10,190,0);d.save('lalan.pdf')};r.readAsDataURL(f)">Download PDF</button>`}
+if(n.includes('Offer')){h=`<h2 style="color:green">🎉 50% OFF on All Printing Services!</h2><p>Karjara Post Office ke paas aao. Mobile: 6200157277</p><a class="btn" href="tel:6200157277">📞 Call Now</a>`}
+document.getElementById('mBody').innerHTML=h;
+document.getElementById('modal').classList.add('show');
+}
+</script>
+</body>
+ </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lalan Print Hub - All Services</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
