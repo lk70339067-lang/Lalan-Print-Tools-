@@ -1,4 +1,127 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lalan Print Hub - All Services</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f1f5f9}
+.header{background:white;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+.logo{font-size:20px;font-weight:900;color:#1e40af} .logo b{color:#7c3aed}
+.search{max-width:900px;margin:16px auto;padding:0 14px}
+.search input{width:100%;padding:14px 20px;border-radius:28px;border:none;box-shadow:0 4px 16px rgba(0,0,0,.08);outline:none;font-size:14px}
+.wrap{max-width:1280px;margin:auto;padding:0 10px 40px}
+.title{font-size:15px;font-weight:800;margin:22px 0 12px;border-left:4px solid #2563eb;padding-left:10px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.card{background:white;border-radius:18px;padding:16px 6px;text-align:center;text-decoration:none;color:#0f172a;border:1px solid #dcfce7;position:relative;min-height:128px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.1);border-color:#2563eb}
+.ico{font-size:36px;margin-bottom:8px}
+.card h3{font-size:11.5px;font-weight:700;line-height:1.3}
+.new{position:absolute;top:7px;right:7px;background:#22c55e;color:white;font-size:8px;padding:3px 6px;border-radius:20px;font-weight:800}
+.hot{position:absolute;top:7px;right:7px;background:#ef4444;color:white;font-size:8px;padding:3px 6px;border-radius:20px;font-weight:800}
+.lock{position:absolute;top:7px;left:7px;font-size:11px}
+@media(max-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr);gap:8px}.card{min-height:115px}.ico{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="header"><div class="logo">AK Lalan Print Hub</div><div style="font-size:12px;background:#fef3c7;padding:5px 10px;border-radius:20px">Cyber Cafe?</div></div>
+<div class="search"><input id="s" onkeyup="search()" placeholder="🔎 Search services, forms, files... (e.g. Aadhaar, List, PDF)"></div>
+<div class="wrap">
+
+<div class="title" style="border-color:#2563eb">Essential & Services</div>
+<div class="grid">
+<a href="tool.html?name=Latest Jobs" class="card f"><span class="new">NEW</span><div class="ico">🖥️</div><h3>Latest Jobs</h3></a>
+<a href="tool.html?name=Mock Test" class="card f"><span class="new">NEW</span><div class="ico">📝✅</div><h3>Mock Test</h3></a>
+<a href="tool.html?name=ID Card Print" class="card f"><span class="new">NEW</span><div class="ico">🖨️</div><h3>ID Card Print</h3></a>
+<a href="tool.html?name=PVC Auto Crop" class="card f"><span class="new">NEW</span><div class="ico">🪪</div><h3>PVC Auto Crop</h3></a>
+<a href="tool.html?name=Auto Print" class="card f"><span class="new">NEW</span><div class="ico">🖨️</div><h3>Auto Print</h3></a>
+<a href="tool.html?name=Passport Photo" class="card f"><div class="ico">👧</div><h3>Passport Photo</h3></a>
+<a href="tool.html?name=Photo Crop And Resize" class="card f"><div class="ico">✂️🖼️</div><h3>Photo Crop And Resize</h3></a>
+<a href="tool.html?name=Resume CV" class="card f"><div class="ico">📄</div><h3>Resume/CV</h3></a>
+<a href="tool.html?name=New Service Post" class="card f"><span class="new">NEW</span><div class="ico">📑</div><h3>New Service Post</h3></a>
+<a href="tool.html?name=Document Album" class="card f"><span class="new">NEW</span><div class="ico">📂</div><h3>Document Album</h3></a>
+<a href="tool.html?name=NSDL PAAM ID" class="card f"><span class="hot">HOT</span><div class="ico">🪪 APPLY</div><h3>NSDL PAAM ID</h3></a>
+<a href="tool.html?name=Payment Locked QR" class="card f"><span class="hot">HOT</span><div class="ico">🔳</div><h3>Payment Locked QR</h3></a>
+</div>
+
+<div class="title" style="border-color:#d946ef">Creative Design Studio</div>
+<div class="grid">
+<a href="tool.html?name=Pro Resume Maker" class="card f"><span class="new">NEW</span><div class="ico">📄</div><h3>Pro Resume Maker</h3></a>
+<a href="tool.html?name=Marriage Biodata" class="card f"><span class="new">NEW</span><div class="ico">💛 VIP</div><h3>Marriage Biodata</h3></a>
+<a href="tool.html?name=Pro ID Maker" class="card f"><span class="new">NEW</span><div class="ico">🪪</div><h3>Pro ID Maker</h3></a>
+<a href="tool.html?name=Pro Poster Maker" class="card f"><span class="new">NEW</span><div class="ico">📷</div><h3>Pro Poster Maker</h3></a>
+<a href="tool.html?name=Application Maker" class="card f"><span class="new">NEW</span><div class="ico">📑</div><h3>Application Maker</h3></a>
+<a href="tool.html?name=Shop Promotion Maker" class="card f"><span class="new">NEW</span><div class="ico">📢</div><h3>Shop Promotion Maker</h3></a>
+</div>
+
+<div class="title" style="border-color:#f97316">Smart PDF & Image Tools</div>
+<div class="grid">
+<a href="tool.html?name=JPG To PDF" class="card f"><div class="ico">JPG→PDF</div><h3>JPG To PDF</h3></a>
+<a href="tool.html?name=PDF To JPG" class="card f"><div class="ico">PDF→JPG</div><h3>PDF To JPG</h3></a>
+<a href="tool.html?name=PNG To PDF" class="card f"><div class="ico">PNG→PDF</div><h3>PNG To PDF</h3></a>
+<a href="tool.html?name=PNG To JPG" class="card f"><div class="ico">PNG→JPG</div><h3>PNG To JPG</h3></a>
+<a href="tool.html?name=Delete PDF Page" class="card f"><div class="ico">PDF ❌</div><h3>Delete PDF Page</h3></a>
+<a href="tool.html?name=Merge PDF" class="card f"><div class="ico">PDF+PDF</div><h3>Merge PDF</h3></a>
+</div>
+
+<div class="title" style="border-color:#10b981">Card Printing Services</div>
+<div class="grid">
+<a href="tool.html?name=Unique ID Card Print" class="card f"><span class="lock">🔒</span><span class="hot">HOT</span><div class="ico">👆</div><h3>Unique ID Card Print</h3></a>
+<a href="tool.html?name=Election Card Print" class="card f"><span class="lock">🔒</span><div class="ico">VOTES</div><h3>Election Card Print</h3></a>
+<a href="tool.html?name=Health Plan Card Print" class="card f"><span class="lock">🔒</span><span class="new">NEW</span><div class="ico">🏥</div><h3>Health Plan Card Print</h3></a>
+<a href="tool.html?name=Tax Id Card Print" class="card f"><span class="lock">🔒</span><div class="ico">TBT</div><h3>Tax Id Card Print</h3></a>
+<a href="tool.html?name=Driving Permit Print" class="card f"><span class="lock">🔒</span><div class="ico">🚗</div><h3>Driving Permit Print</h3></a>
+<a href="tool.html?name=School College ID" class="card f"><span class="lock">🔒</span><div class="ico">🪪</div><h3>School/College ID</h3></a>
+<a href="tool.html?name=Food Subsidy Card Print" class="card f"><span class="lock">🔒</span><span class="new">NEW</span><div class="ico">🖨️</div><h3>Food Subsidy Card Print</h3></a>
+</div>
+
+<div class="title" style="border-color:#ec4899">Portal Service</div>
+<div class="grid">
+<a href="tool.html?name=Census Of India" class="card f"><div class="ico">🇮🇳</div><h3>Census Of India</h3></a>
+<a href="tool.html?name=Aadhar Beta Service" class="card f"><div class="ico">🅰️ Beta</div><h3>Aadhar Beta Service</h3></a>
+<a href="tool.html?name=Aadhaar Information" class="card f"><div class="ico">🪪</div><h3>Aadhaar Information</h3></a>
+<a href="tool.html?name=PAN Card Service" class="card f"><div class="ico">💳⬇️</div><h3>PAN Card Service</h3></a>
+<a href="tool.html?name=Voter ID Correction" class="card f"><div class="ico">🗳️</div><h3>Voter ID Correction</h3></a>
+<a href="tool.html?name=Ayushman Bharat" class="card f"><div class="ico">PM-JAY</div><h3>Ayushman Bharat</h3></a>
+<a href="tool.html?name=Driving Licence Service" class="card f"><div class="ico">🪪</div><h3>Driving Licence Service</h3></a>
+<a href="tool.html?name=RC Service" class="card f"><div class="ico">📒</div><h3>RC Service</h3></a>
+<a href="tool.html?name=Vehicle Service" class="card f"><div class="ico">🚗</div><h3>Vehicle Service</h3></a>
+<a href="tool.html?name=Birth Death Certificate" class="card f"><div class="ico">📜</div><h3>Birth & Death Certificate</h3></a>
+<a href="tool.html?name=E-Challan" class="card f"><div class="ico">💰</div><h3>E-Challan</h3></a>
+<a href="tool.html?name=E-Shram Card" class="card f"><div class="ico">E-Shram</div><h3>E-Shram Card</h3></a>
+<a href="tool.html?name=APAAR ID Card" class="card f"><div class="ico">APAAR</div><h3>APAAR ID Card</h3></a>
+<a href="tool.html?name=ABHA Card" class="card f"><div class="ico">ABHA</div><h3>ABHA Card</h3></a>
+<a href="tool.html?name=PM Fasal Bima" class="card f"><div class="ico">🌾</div><h3>PM Fasal Bima</h3></a>
+<a href="tool.html?name=PMAY Gramin" class="card f"><div class="ico">🏠</div><h3>PMAY-Gramin</h3></a>
+<a href="tool.html?name=PMAY Urban" class="card f"><div class="ico">🏠</div><h3>PMAY-Urban</h3></a>
+<a href="tool.html?name=EPFO" class="card f"><div class="ico">EPFO</div><h3>EPFO</h3></a>
+<a href="tool.html?name=LIC Service" class="card f"><div class="ico">LIC</div><h3>LIC Service</h3></a>
+<a href="tool.html?name=E-NAM" class="card f"><div class="ico">E-NAM</div><h3>E-NAM</h3></a>
+<a href="tool.html?name=PM SVANidhi Yojana" class="card f"><div class="ico">💧</div><h3>PM SVANidhi</h3></a>
+<a href="tool.html?name=Soil Health Card" class="card f"><div class="ico">🌱</div><h3>Soil Health Card</h3></a>
+<a href="tool.html?name=MKisan Portal" class="card f"><div class="ico">👨‍🌾</div><h3>MKisan Portal</h3></a>
+<a href="tool.html?name=PM Surya Ghar" class="card f"><div class="ico">☀️</div><h3>PM Surya Ghar</h3></a>
+<a href="tool.html?name=Udyam Aadhaar" class="card f"><div class="ico">UDYAM</div><h3>Udyam Aadhaar</h3></a>
+<a href="tool.html?name=National Scholarship" class="card f"><div class="ico">🎓</div><h3>National Scholarship</h3></a>
+<a href="tool.html?name=Railway Service" class="card f"><div class="ico">🚆</div><h3>Railway Service</h3></a>
+<a href="tool.html?name=Passport Seva" class="card f"><div class="ico">🛂</div><h3>Passport Seva</h3></a>
+<a href="tool.html?name=GST Verification" class="card f"><div class="ico">GST</div><h3>GST Verification</h3></a>
+<a href="tool.html?name=PUC Service" class="card f"><div class="ico">PUC</div><h3>PUC Service</h3></a>
+<a href="tool.html?name=NCS" class="card f"><div class="ico">NCS</div><h3>National Career Service</h3></a>
+<a href="tool.html?name=CIBIL Score" class="card f"><div class="ico">📊 900</div><h3>CIBIL Score</h3></a>
+</div>
+
+</div>
+<script>
+function search(){
+ let v=document.getElementById('s').value.toLowerCase();
+ document.querySelectorAll('.f').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(v)?'':'none'})
+}
+</script>
+</body>
+ </html>
+<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lalan Print Hub</title>
 <style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f4f6f9;color:#222}header{background:linear-gradient(135deg,#1565ff,#5b21ff);color:white;padding:18px 15px;text-align:center}.logo{font-size:28px;font-weight:bold}.tagline{font-size:13px;margin-top:5px}nav{background:white;box-shadow:0 2px 8px rgba(0,0,0,.12);position:sticky;top:0;z-index:100}.nav-container{max-width:1200px;margin:auto;display:flex;justify-content:center;gap:25px;padding:12px;flex-wrap:wrap}nav a{text-decoration:none;color:#222;font-weight:bold;font-size:14px}.search-box{max-width:900px;margin:22px auto;padding:0 15px}.search-box input{width:100%;padding:15px 18px;border:none;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:15px;outline:none}.hero{max-width:1200px;margin:20px auto;padding:35px 20px;text-align:center;background:white;border-radius:15px;box-shadow:0 3px 12px rgba(0,0,0,.08)}.hero h1{color:#155eef;font-size:30px}.container{max-width:1200px;margin:auto;padding:10px 15px 40px}.section{margin-top:30px}.section-title{background:linear-gradient(135deg,#155eef,#5125ff);color:white;padding:13px 18px;border-radius:9px;font-size:20px;margin-bottom:16px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{position:relative;background:white;border-radius:12px;padding:20px 12px;text-align:center;box-shadow:0 2px 9px rgba(0,0,0,.10);transition:.25s;min-height:145px;text-decoration:none;color:inherit;display:block}.card:hover{transform:translateY(-4px);box-shadow:0 7px 18px rgba(0,0,0,.15);border:1px solid #155eef}.icon{font-size:34px;margin-bottom:9px}.card h3{font-size:15px;margin-bottom:7px}.card p{color:#777;font-size:11px}.badge{position:absolute;top:8px;right:8px;padding:4px 7px;border-radius:5px;color:white;font-size:9px;font-weight:bold}.new{background:#16a34a}.hot{background:#ef4444}.pro{background:#7c3aed}footer{background:#111827;color:white;text-align:center;padding:28px 15px;margin-top:30px}@media(max-width:900px){.services{grid-template-columns:repeat(3,1fr)}}@media(max-width:650px){.services{grid-template-columns:repeat(2,1fr)}}</style>
 </head><body>
