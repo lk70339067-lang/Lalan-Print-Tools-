@@ -1,113 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AK Print Hub - by Lalan - All Links</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f8fafc}.top{position:sticky;top:0;z-index:99;background:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.07)}.logo{font-weight:900;color:#1e40af}.search{max-width:900px;margin:14px auto;padding:0 12px}.search input{width:100%;padding:13px 16px;border-radius:24px;border:1px solid #e2e8f0;outline:none}.wrap{max-width:1320px;margin:auto;padding:0 12px 90px}.sec{font-weight:800;font-size:15px;margin:22px 0 10px;border-left:5px solid #2563eb;padding-left:10px}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.card{background:#fff;border-radius:16px;padding:14px 6px;text-align:center;border:1px solid #e2e8f0;position:relative;min-height:115px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}.card h3{font-size:11px;margin-top:6px}.ico{font-size:28px}.badge{position:absolute;top:6px;right:6px;font-size:8px;padding:3px 6px;border-radius:12px;color:#fff;font-weight:800}.new{background:#22c55e}.hot{background:#ef4444}@media(max-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}#modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:200;padding:14px}#modal.show{display:flex;justify-content:center}.box{background:#fff;width:100%;max-width:700px;border-radius:16px;padding:18px;margin-top:20px}.btn{padding:10px 16px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;margin:4px}input,textarea{width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:8px;margin:6px 0}.help{position:fixed;bottom:16px;right:16px;background:#22c55e;color:#fff;padding:12px 16px;border-radius:26px;font-weight:800;text-decoration:none}</style>
-</head>
-<body>
-<div class="top"><div class="logo">AK AkprintHub - by Lalan</div><a class="btn" href="https://wa.me/916200157277">Cyber Cafe?</a></div>
-<div class="search"><input placeholder="🔎 Search services..." onkeyup="let v=this.value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(v)?'flex':'none')"></div>
-<div class="wrap">
-<div class="sec">Essential & Services</div><div class="grid">
-<div class="card" onclick="openTool('Latest Jobs','https://www.sarkariresult.com.cm/')"><span class="badge new">NEW</span><div class="ico">💼</div><h3>Latest Jobs</h3></div>
-<div class="card" onclick="openTool('Mock Test','https://testbook.com/')"><span class="badge new">NEW</span><div class="ico">📝</div><h3>Mock Test</h3></div>
-<div class="card" onclick="openTool('ID Card Print')"><span class="badge new">NEW</span><div class="ico">🪪</div><h3>ID Card Print</h3></div>
-<div class="card" onclick="openTool('PVC Auto Crop')"><span class="badge new">NEW</span><div class="ico">🖼️</div><h3>PVC Auto Crop</h3></div>
-<div class="card" onclick="openTool('Auto Print')"><span class="badge new">NEW</span><div class="ico">🖨️</div><h3>Auto Print</h3></div>
-<div class="card" onclick="openTool('Passport Photo')"><div class="ico">👩</div><h3>Passport Photo</h3></div>
-<div class="card" onclick="openTool('Photo Crop And Resize')"><div class="ico">✂️</div><h3>Photo Crop And Resize</h3></div>
-<div class="card" onclick="openTool('Resume/CV')"><div class="ico">📄</div><h3>Resume/CV</h3></div>
-<div class="card" onclick="openTool('New Service Post')"><span class="badge new">NEW</span><div class="ico">📑</div><h3>New Service Post</h3></div>
-<div class="card" onclick="openTool('Document Album')"><span class="badge new">NEW</span><div class="ico">📁</div><h3>Document Album</h3></div>
-<div class="card" onclick="openTool('NSDL PAAM ID','https://www.tin-nsdl.com/services/pan/')"><span class="badge hot">HOT</span><div class="ico">🆔</div><h3>NSDL PAAM ID</h3></div>
-<div class="card" onclick="openTool('Payment Locked QR')"><span class="badge hot">HOT</span><div class="ico">🔳</div><h3>Payment Locked QR</h3></div>
-</div>
-<div class="sec" style="border-color:#d946ef">Creative Design Studio</div><div class="grid">
-<div class="card" onclick="openTool('Pro Resume Maker')"><span class="badge new">NEW</span><div class="ico">📄</div><h3>Pro Resume Maker</h3></div>
-<div class="card" onclick="openTool('Marriage Biodata')"><span class="badge new">NEW</span><div class="ico">💍</div><h3>Marriage Biodata</h3></div>
-<div class="card" onclick="openTool('Pro ID Maker')"><span class="badge new">NEW</span><div class="ico">🪪</div><h3>Pro ID Maker</h3></div>
-<div class="card" onclick="openTool('Pro Poster Maker')"><span class="badge new">NEW</span><div class="ico">🎨</div><h3>Pro Poster Maker</h3></div>
-<div class="card" onclick="openTool('Application Maker')"><span class="badge new">NEW</span><div class="ico">📝</div><h3>Application Maker</h3></div>
-<div class="card" onclick="openTool('Shop Promotion Maker')"><span class="badge new">NEW</span><div class="ico">🏪</div><h3>Shop Promotion Maker</h3></div>
-</div>
-<div class="sec" style="border-color:#f59e0b">Smart PDF & Image Tools</div><div class="grid">
-<div class="card" onclick="openTool('JPG To PDF')"><div class="ico">📄</div><h3>JPG To PDF</h3></div>
-<div class="card" onclick="openTool('PDF To JPG')"><div class="ico">🖼️</div><h3>PDF To JPG</h3></div>
-<div class="card" onclick="openTool('PNG To PDF')"><div class="ico">📄</div><h3>PNG To PDF</h3></div>
-<div class="card" onclick="openTool('PNG To JPG')"><div class="ico">🖼️</div><h3>PNG To JPG</h3></div>
-<div class="card" onclick="openTool('Delete PDF Page')"><div class="ico">🗑️</div><h3>Delete PDF Page</h3></div>
-<div class="card" onclick="openTool('Merge PDF')"><div class="ico">🔗</div><h3>Merge PDF</h3></div>
-</div>
-<div class="sec" style="border-color:#10b981">Card Printing Services</div><div class="grid">
-<div class="card" onclick="openTool('Unique ID Card Print','https://myaadhaar.uidai.gov.in/')"><span class="badge hot">HOT</span><div class="ico">👆</div><h3>Unique ID Card Print</h3></div>
-<div class="card" onclick="openTool('Election Card Print','https://voters.eci.gov.in/')"><div class="ico">🗳️</div><h3>Election Card Print</h3></div>
-<div class="card" onclick="openTool('Health Plan Card Print','https://beneficiary.nha.gov.in/')"><span class="badge new">NEW</span><div class="ico">🏥</div><h3>Health Plan Card Print</h3></div>
-<div class="card" onclick="openTool('Tax Id Card Print','https://www.tin-nsdl.com/services/pan/')"><div class="ico">💳</div><h3>Tax Id Card Print</h3></div>
-<div class="card" onclick="openTool('Driving Permit Print','https://parivahan.gov.in/')"><div class="ico">🚗</div><h3>Driving Permit Print</h3></div>
-<div class="card" onclick="openTool('School/College ID')"><div class="ico">🎓</div><h3>School/College ID</h3></div>
-<div class="card" onclick="openTool('Food Subsidy Card Print','https://nfsa.gov.in/')"><span class="badge new">NEW</span><div class="ico">🍚</div><h3>Food Subsidy Card Print</h3></div>
-</div>
-<div class="sec" style="border-color:#ec4899">Portal Service</div><div class="grid">
-<div class="card" onclick="openTool('Census Of India','https://censusindia.gov.in/')"><div class="ico">🏛️</div><h3>Census Of India</h3></div>
-<div class="card" onclick="openTool('Aadhar Beta Service','https://myaadhaar.uidai.gov.in/')"><div class="ico">🆔</div><h3>Aadhar Beta Service</h3></div>
-<div class="card" onclick="openTool('Aadhaar Information','https://myaadhaar.uidai.gov.in/')"><div class="ico">📇</div><h3>Aadhaar Information</h3></div>
-<div class="card" onclick="openTool('PAN Card Service','https://www.tin-nsdl.com/services/pan/')"><div class="ico">💳</div><h3>PAN Card Service</h3></div>
-<div class="card" onclick="openTool('Voter ID Correction','https://voters.eci.gov.in/')"><div class="ico">🗳️</div><h3>Voter ID Correction</h3></div>
-<div class="card" onclick="openTool('Ayushman Bharat','https://beneficiary.nha.gov.in/')"><div class="ico">🏥</div><h3>Ayushman Bharat</h3></div>
-<div class="card" onclick="openTool('Driving Licence','https://parivahan.gov.in/')"><div class="ico">🚗</div><h3>Driving Licence</h3></div>
-<div class="card" onclick="openTool('RC Service','https://vahan.parivahan.gov.in/')"><div class="ico">📘</div><h3>RC Service</h3></div>
-<div class="card" onclick="openTool('Vehicle Service','https://vahan.parivahan.gov.in/')"><div class="ico">🚘</div><h3>Vehicle Service</h3></div>
-<div class="card" onclick="openTool('Birth & Death Certificate','https://crsorgi.gov.in/')"><div class="ico">📜</div><h3>Birth & Death Certificate</h3></div>
-<div class="card" onclick="openTool('E-Challan','https://echallan.parivahan.gov.in/')"><div class="ico">🧾</div><h3>E-Challan</h3></div>
-<div class="card" onclick="openTool('E-Shram Card','https://eshram.gov.in/')"><div class="ico">🪪</div><h3>E-Shram Card</h3></div>
-<div class="card" onclick="openTool('APAAR ID Card','https://apaar.education.gov.in/')"><div class="ico">🆔</div><h3>APAAR ID Card</h3></div>
-<div class="card" onclick="openTool('ABHA Card','https://abha.abdm.gov.in/')"><div class="ico">🏥</div><h3>ABHA Card</h3></div>
-<div class="card" onclick="openTool('PM Fasal Bima','https://pmfby.gov.in/')"><div class="ico">🌾</div><h3>PM Fasal Bima</h3></div>
-<div class="card" onclick="openTool('PMAY-Gramin','https://pmayg.nic.in/')"><div class="ico">🏠</div><h3>PMAY-Gramin</h3></div>
-<div class="card" onclick="openTool('PMAY-Urban','https://pmaymis.gov.in/')"><div class="ico">🏠</div><h3>PMAY-Urban</h3></div>
-<div class="card" onclick="openTool('EPFO','https://www.epfindia.gov.in/')"><div class="ico">👷</div><h3>EPFO</h3></div>
-<div class="card" onclick="openTool('LIC Service','https://licindia.in/')"><div class="ico">❤️</div><h3>LIC Service</h3></div>
-<div class="card" onclick="openTool('E-NAM','https://enam.gov.in/')"><div class="ico">🌱</div><h3>E-NAM</h3></div>
-<div class="card" onclick="openTool('PM SVANidhi','https://pmsvanidhi.mohua.gov.in/')"><div class="ico">🤝</div><h3>PM SVANidhi</h3></div>
-<div class="card" onclick="openTool('Soil Health Card','https://soilhealth.dac.gov.in/')"><div class="ico">🌿</div><h3>Soil Health Card</h3></div>
-<div class="card" onclick="openTool('MKisan Portal','https://mkisan.gov.in/')"><div class="ico">👨‍🌾</div><h3>MKisan Portal</h3></div>
-<div class="card" onclick="openTool('PM Surya Ghar','https://pmsuryaghar.gov.in/')"><div class="ico">☀️</div><h3>PM Surya Ghar</h3></div>
-<div class="card" onclick="openTool('Udyam Aadhaar','https://udyamregistration.gov.in/')"><div class="ico">🏢</div><h3>Udyam Aadhaar</h3></div>
-<div class="card" onclick="openTool('National Scholarship','https://scholarships.gov.in/')"><div class="ico">🎓</div><h3>National Scholarship</h3></div>
-<div class="card" onclick="openTool('Lost/Found Mobile','https://www.ceir.gov.in/')"><div class="ico">📱</div><h3>Lost/Found Mobile</h3></div>
-<div class="card" onclick="openTool('Railway Service','https://www.irctc.co.in/')"><div class="ico">🚆</div><h3>Railway Service</h3></div>
-<div class="card" onclick="openTool('Passport Seva','https://portal2.passportindia.gov.in/')"><div class="ico">🛂</div><h3>Passport Seva</h3></div>
-<div class="card" onclick="openTool('PM Kisan','https://pmkisan.gov.in/')"><div class="ico">👨‍🌾</div><h3>PM Kisan</h3></div>
-<div class="card" onclick="openTool('GST Verification','https://services.gst.gov.in/')"><div class="ico">GST</div><h3>GST Verification</h3></div>
-<div class="card" onclick="openTool('Checkpost Tax','https://vahan.parivahan.gov.in/')"><div class="ico">🚧</div><h3>Checkpost Tax</h3></div>
-<div class="card" onclick="openTool('Vahan Green Sewa')"><div class="ico">🟢</div><h3>Vahan Green Sewa</h3></div>
-<div class="card" onclick="openTool('PUC Service','https://vahan.parivahan.gov.in/')"><div class="ico">PUC</div><h3>PUC Service</h3></div>
-<div class="card" onclick="openTool('National Payments','https://www.npci.org.in/')"><div class="ico">💸</div><h3>National Payments</h3></div>
-<div class="card" onclick="openTool('National Consumer','https://consumerhelpline.gov.in/')"><div class="ico">👨‍👩‍👧</div><h3>National Consumer</h3></div>
-<div class="card" onclick="openTool('National Career Service','https://www.ncs.gov.in/')"><div class="ico">🏃</div><h3>National Career Service</h3></div>
-<div class="card" onclick="openTool('CIBIL Score','https://www.cibil.com/')"><div class="ico">📊</div><h3>CIBIL Score</h3></div>
-<div class="card" onclick="openTool('INDANE GAS','https://indane.co.in/')"><div class="ico">⛽</div><h3>INDANE GAS</h3></div>
-<div class="card" onclick="openTool('HP GAS','https://www.hindustanpetroleum.com/')"><div class="ico">⛽</div><h3>HP GAS</h3></div>
-<div class="card" onclick="openTool('BHARAT GAS','https://www.bharatpetroleum.com/')"><div class="ico">⛽</div><h3>BHARAT GAS</h3></div>
-<div class="card" onclick="openTool('Unique Disability ID','https://www.swavlambancard.gov.in/')"><div class="ico">♿</div><h3>Unique Disability ID</h3></div>
-<div class="card" onclick="openTool('Swachh Bharat','https://swachhbharatmission.gov.in/')"><div class="ico">📚</div><h3>Swachh Bharat</h3></div>
-<div class="card" onclick="openTool('Fancy Mobile Number','https://fancy.parivahan.gov.in/')"><div class="ico">VIP</div><h3>Fancy Number</h3></div>
-</div></div>
-<a class="help" href="https://wa.me/916200157277">💬 Help & Feedback</a>
-<div id="modal" onclick="if(event.target.id==='modal')this.classList.remove('show')"><div class="box"><div style="display:flex;justify-content:space-between"><h3 id="mTitle"></h3><button class="btn" onclick="modal.classList.remove('show')">✕</button></div><div id="mBody" style="margin-top:12px"></div></div></div>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AK AkprintHub - Sabhi Ka Final - by Lalan</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial}body{background:#f6fbf8}.top{position:sticky;top:0;z-index:99;background:#fff;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 8px rgba(0,0,0,.06)}.logo{font-weight:800;font-size:14px}.logo b{background:#0f172a;color:#fff;padding:3px 7px;border-radius:6px}.wrap{max-width:1280px;margin:auto;padding:8px 8px 100px}.sec{font-weight:800;font-size:13px;margin:14px 0 8px;padding-left:8px;border-left:3px solid #ec4899}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}.card{background:#fff;border:1.3px solid #d7f0df;border-radius:14px;padding:10px 4px;text-align:center;min-height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}.card.active{border-color:#7c3aed;background:#f5f3ff}.card h3{font-size:10px;margin-top:6px;font-weight:700}.ico{font-size:26px}.expand{grid-column:1/-1;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:14px;padding:14px;margin:4px 0 10px}.expand-head{display:flex;justify-content:space-between;font-weight:800;font-size:13px;margin-bottom:12px}.close{cursor:pointer;background:#fff;border:1px solid #e2e8f0;border-radius:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center}.subgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}@media(max-width:700px){.subgrid{grid-template-columns:repeat(1,1fr)}}.sub{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:11px 10px;font-size:11px;font-weight:600;color:#334155;text-decoration:none}.sub.orange{background:#fffbeb;border-color:#fde68a}.help{position:fixed;bottom:14px;right:14px;background:#22c55e;color:#fff;padding:11px 16px;border-radius:26px;font-weight:800;text-decoration:none;z-index:60}</style></head><body>
+<div class="top"><div class="logo"><b>AK</b> AkprintHub by TechnicalMehta</div><div style="font-size:10px">Home Services Latest Jobs Pricing More <span style="background:#ff4d2d;color:#fff;padding:5px 10px;border-radius:18px">Cyber Cafe?</span></div></div>
+<div class="wrap"><div class="sec">Portal Service - Sabhi Ka - 164 Links</div><div class="grid" id="grid"></div></div>
+<a class="help" href="https://wa.me/916200157277">Help & Feedback</a>
 <script>
-let curLink='';
-function openTool(name,link=''){
-curLink=link;document.getElementById('mTitle').innerText=name;
-let h='';
-if(name.includes('JPG To PDF')||name.includes('PNG To PDF')){h=`<input type="file" id="imgIn" accept="image/*"><button class="btn" onclick="convertPdf()">Convert PDF</button><p id="msg"></p>`}
-else if(link){h=`<p><b>${name}</b> Official Link:</p><div style="background:#f0f9ff;padding:10px;border-radius:8px;word-break:break-all">${link}</div><a class="btn" href="${link}" target="_blank">🚀 Open Portal</a>`}
-else{h=`<p><b>${name}</b> tool working hai.</p><button class="btn" onclick="alert('✅ Done')">Start</button>`}
-document.getElementById('mBody').innerHTML=h;document.getElementById('modal').classList.add('show');
+const DATA={
+"Driving Licence Service":[["DL Mobile Number Update","https://parivahan.gov.in/"],["New DL Apply","https://parivahan.gov.in/"],["DL Status","https://parivahan.gov.in/"],["DL Download","https://parivahan.gov.in/"],["Find DL Number","https://parivahan.gov.in/"],["Find DL Application Number","https://parivahan.gov.in/"],["Official Website","https://parivahan.gov.in/"]],
+"RC Service":[["RC Mobile Number Update","https://vahan.parivahan.gov.in/"],["Owner Details","https://vahan.parivahan.gov.in/"],["Print Registration Certificate","https://vahan.parivahan.gov.in/"],["Know Vehicle Details","https://vahan.parivahan.gov.in/"],["Add Nominee Details","https://vahan.parivahan.gov.in/"]],
+"Vehicle Service":[["Owner Details","https://vahan.parivahan.gov.in/"],["CNG VAHAN/Apply","https://vahan.parivahan.gov.in/"],["CNG Track Application Status","https://vahan.parivahan.gov.in/"],["Vehicle Fitness Testing Booking","https://vahan.parivahan.gov.in/"],["Fancy Number Search","https://fancy.parivahan.gov.in/"],["Online Payment of National...","https://vahan.parivahan.gov.in/"],["National Permit Check...","https://vahan.parivahan.gov.in/"],["Check Failed Transactions...","https://vahan.parivahan.gov.in/"],["Print Permit Receipt","https://vahan.parivahan.gov.in/"],["Dispose Pending Transactions","https://vahan.parivahan.gov.in/"],["Show all Payment Details","https://vahan.parivahan.gov.in/"],["ALL INDIA TOURIST PERMIT","https://vahan.parivahan.gov.in/"],["FASTag Status","https://vahan.parivahan.gov.in/"]],
+"Birth & Death Cirtificate":[["All Forms","https://crsorgi.gov.in/"],["MCCD Form","https://crsorgi.gov.in/"],["Public Login","https://crsorgi.gov.in/"],["Official Website","https://crsorgi.gov.in/"]],
+"E-Challan":[["Virtual Court Challan Pay","https://echallan.parivahan.gov.in/"],["E-Challan Chack","https://echallan.parivahan.gov.in/"],["E-Challan Pay Status","https://echallan.parivahan.gov.in/"],["Vahan PGI","https://vahan.parivahan.gov.in/"]],
+"E-Shram Card":[["Eshram Card Apply (Platform...","https://eshram.gov.in/"],["Eshram Card Apply","https://register.eshram.gov.in/"],["Eshram Card Download","https://eshram.gov.in/"],["Eshram Card Download(UAN)","https://eshram.gov.in/"],["Eshram Card Number Find","https://eshram.gov.in/"],["Eshram Card CSC Login","https://eshram.gov.in/"]],
+"APAAR ID Card":[["New Apply","https://apaar.education.gov.in/"],["Apaar Login","https://apaar.education.gov.in/"],["ABC Portal","https://www.abc.gov.in/"]],
+"ABHA Card":[["Abha Card Apply By Aadhaar","https://abha.abdm.gov.in/"],["Abha Card Apply By Driving...","https://abha.abdm.gov.in/"],["Abha Card Download","https://abha.abdm.gov.in/"],["Abha Card E-KYC","https://abha.abdm.gov.in/"],["Abha Card Number Find","https://abha.abdm.gov.in/"],["Abha Card Track/Enrolment...","https://abha.abdm.gov.in/"],["Abha Card Login","https://abha.abdm.gov.in/"]],
+"PM Fasal Bima Yojana":[["New Farmer Registration","https://pmfby.gov.in/"],["Self Registration","https://pmfby.gov.in/"],["Farmer Login","https://pmfby.gov.in/"],["Official Website/Self Login","https://pmfby.gov.in/"],["Chack Application Status","https://pmfby.gov.in/"]],
+"PMAY-Gramin":[["Payment/Kist Chack","https://pmayg.nic.in/"],["New List Chack","https://pmayg.nic.in/"],["Registration No Find","https://pmayg.nic.in/"],["Registration Number List","https://pmayg.nic.in/"],["New Rural Housing Report","https://pmayg.nic.in/"],["Search Beneficiary Details","https://pmayg.nic.in/"],["FTO Tracking Rural","https://pmayg.nic.in/"]],
+"PMAY-Urban":[["PMAY New Apply-Urban","https://pmaymis.gov.in/"],["Track Assessment Status-Urban","https://pmaymis.gov.in/"],["Track SURVEY-Urban","https://pmaymis.gov.in/"],["PMAY Check-Eligibility-Urban","https://pmaymis.gov.in/"],["Scheme Guidelines","https://pmaymis.gov.in/"]],
+"EPFO":[["UAN Login Employees (EPFO)","https://unifiedportal-mem.epfindia.gov.in/"],["EPF Passbook (EPFO)","https://passbook.epfindia.gov.in/"],["Find UAN (EPFO)","https://unifiedportal-mem.epfindia.gov.in/"]],
+"MKisan Portal":[["Registration for KSEWA...","https://mkisan.gov.in/"],["KSewa Login (mKisan)","https://mkisan.gov.in/"],["Farmer Registration (mKisan)","https://mkisan.gov.in/"],["Login Registration (mKisan)","https://mkisan.gov.in/"]],
+"PM Surya Ghar Yojana":[["Apply","https://pmsuryaghar.gov.in/"],["Benefits Details","https://pmsuryaghar.gov.in/"],["Consumer Financing Options","https://pmsuryaghar.gov.in/"],["Find Registered Vendors","https://pmsuryaghar.gov.in/"],["Apply/Login","https://pmsuryaghar.gov.in/consumerRegistration"],["Vendor Registration","https://pmsuryaghar.gov.in/"],["Vendor Financing Options","https://pmsuryaghar.gov.in/"]],
+"Railway Service":[["PNR Check","https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html"],["Train Check","https://enquiry.indianrail.gov.in/mntes/"],["Train Seat Check","https://www.irctc.co.in/"],["Fare Enquiry","https://enquiry.indianrail.gov.in/mntes/"],["Train Number Track","https://enquiry.indianrail.gov.in/"]],
+"Passport Seva Service":[["Passport Login","https://portal2.passportindia.gov.in/"],["User Registration","https://portal2.passportindia.gov.in/"],["Apply Passport","https://portal2.passportindia.gov.in/"],["Check Passport Appointment","https://portal2.passportindia.gov.in/"],["Track Passport Application","https://portal2.passportindia.gov.in/"],["Passport Police Clearance","https://portal2.passportindia.gov.in/"],["Annexures/Affidavits Forms","https://portal2.passportindia.gov.in/"]],
+"PM Kisan":[["PM Kisan Status Chack","https://pmkisan.gov.in/"],["Find Registration Number","https://pmkisan.gov.in/"],["PM Kisan New Farm Apply","https://pmkisan.gov.in/"],["Update Farm","https://pmkisan.gov.in/"],["PM Kisan Status Chack (CSC)","https://pmkisan.gov.in/"],["Update of Missing Beneficiary","https://pmkisan.gov.in/"],["Update Mobile Number","https://pmkisan.gov.in/"],["Recovery Form Ineligible","https://pmkisan.gov.in/"],["PM Kisan KYC","https://pmkisan.gov.in/"]],
+"INDANE GAS":[["Check Gas Subsidy","https://indane.co.in/"],["Give up Subsidy","https://indane.co.in/"],["Online Application Ujjwala","https://indane.co.in/"],["Find Your LPG ID","https://indane.co.in/"],["User Login","https://indane.co.in/"],["User Register","https://indane.co.in/"],["INDANE GAS Official Website","https://indane.co.in/"],["PMUY Official Website","https://pmuy.gov.in/"],["KYC APP For Android","https://play.google.com/"],["Face RD App","https://play.google.com/"],["KYC Video Hindi","https://youtube.com/"],["New KYC Form","https://indane.co.in/","orange"],["DBTL Form","https://indane.co.in/","orange"]],
+"HP GAS":[["Check Gas Subsidy","https://www.hindustanpetroleum.com/"],["Give up Subsidy","https://www.hindustanpetroleum.com/"],["Online Application Ujjwala","https://www.hindustanpetroleum.com/"],["Find Your LPG ID","https://www.hindustanpetroleum.com/"],["User Login","https://www.hindustanpetroleum.com/"],["User Register","https://www.hindustanpetroleum.com/"],["HP GAS Official Website","https://www.hindustanpetroleum.com/"],["PMUY Official Website","https://pmuy.gov.in/"],["KYC APP For Android","https://play.google.com/"],["Face RD App","https://play.google.com/"],["KYC Video Hindi","https://youtube.com/"],["New KYC Form","https://www.hindustanpetroleum.com/","orange"],["DBTL Form","https://www.hindustanpetroleum.com/","orange"],["Book Cylinder","https://www.hindustanpetroleum.com/"],["Locate Distributor","https://www.hindustanpetroleum.com/"]],
+"BHARAT GAS":[["BOOK CYLINDER","https://www.bharatpetroleum.com/"],["Book & Pay Online","https://www.bharatpetroleum.com/"],["Check Gas Subsidy","https://www.bharatpetroleum.com/"],["Online Application Ujjwala","https://www.bharatpetroleum.com/"],["Find Your LPG ID","https://www.bharatpetroleum.com/"],["Bharat Gas Official Website","https://www.bharatpetroleum.com/"],["PMUY Official Website","https://pmuy.gov.in/"],["KYC APP For Android","https://play.google.com/"],["Face RD App","https://play.google.com/"],["KYC Video Hindi","https://youtube.com/"],["New KYC Form","https://www.bharatpetroleum.com/","orange"],["DBTL Form","https://www.bharatpetroleum.com/","orange"]],
+"Unique Disability ID":[["Apply Online","https://www.swavlambancard.gov.in/"],["Track Application","https://www.swavlambancard.gov.in/"],["Login","https://www.swavlambancard.gov.in/"],["Official Website","https://www.swavlambancard.gov.in/"]],
+"Swachhbharatmi":[["Apply Online","https://swachhbharatmission.gov.in/"],["Login","https://swachhbharatmission.gov.in/"],["Track Application Status","https://swachhbharatmission.gov.in/"]],
+"Fancy Mobile Number":[["Fancy Number Booking","https://fancy.parivahan.gov.in/"]]
+};
+let active=null;
+function render(){
+ let g=document.getElementById('grid');g.innerHTML='';
+ Object.keys(DATA).forEach(k=>{
+  let c=document.createElement('div');c.className='card';if(active===k)c.classList.add('active');
+  let icon=k.includes('Driving')?'🪪':k.includes('RC')?'📒':k.includes('Vehicle')?'🚗':k.includes('Birth')?'📜':k.includes('Challan')?'🧾':k.includes('E-Shram')?'🪪':k.includes('APAAR')?'🆔':k.includes('ABHA')?'🪪':k.includes('Fasal')?'👨‍🌾':k.includes('PMAY')?'🏠':k.includes('EPFO')?'🛡️':k.includes('MKisan')?'👨‍🌾':k.includes('Surya')?'☀️':k.includes('Railway')?'🚂':k.includes('Passport')?'🛂':k.includes('Kisan')?'👨‍🌾':k.includes('INDANE')?'⛽':k.includes('HP GAS')?'⛽':k.includes('BHARAT')?'⛽':k.includes('Disability')?'♿':k.includes('Swachh')?'🚽':k.includes('Fancy')?'👑':'🔗';
+  c.innerHTML='<div class="ico">'+icon+'</div><h3>'+k+'</h3>';c.onclick=()=>toggle(k,c);g.appendChild(c);
+ });
 }
-function convertPdf(){let f=document.getElementById('imgIn').files[0];if(!f)return alert('Image select karo');let r=new FileReader();r.onload=e=>{let {jsPDF}=window.jspdf;let d=new jsPDF();d.addImage(e.target.result,'JPEG',10,10,190,0);d.save('akprint.pdf');document.getElementById('msg').innerText='✅ Downloaded'};r.readAsDataURL(f)}
+function toggle(key,el){
+ let grid=document.getElementById('grid');let existing=document.querySelector('.expand');
+ if(active===key){if(existing)existing.remove();active=null;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));return;}
+ if(existing)existing.remove();document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));el.classList.add('active');active=key;
+ let items=DATA[key]||[];let row=document.createElement('div');row.className='expand';let html='<div class="expand-head"><span>'+key+'</span><span class="close" onclick="closeExpand()">✕</span></div><div class="subgrid">';items.forEach(([name,link,ty])=>{let orange=ty==='orange'?' orange':'';html+='<a class="sub'+orange+'" href="'+link+'" target="_blank">↗ '+name+'</a>';});html+='</div>';row.innerHTML=html;
+ let cards=Array.from(grid.children).filter(e=>!e.classList.contains('expand'));let idx=cards.indexOf(el);let cols=window.innerWidth<=900?3:6;let rowEnd=Math.ceil((idx+1)/cols)*cols;let before=grid.children[rowEnd]||null;grid.insertBefore(row,before);row.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function closeExpand(){let e=document.querySelector('.expand');if(e)e.remove();active=null;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));}
+render();
 </script>
-</body>
-                                             </html>
+</body></html>
+                                             
