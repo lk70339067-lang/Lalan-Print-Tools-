@@ -1,1 +1,113 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK Print Hub - by Lalan - All Links</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f8fafc}.top{position:sticky;top:0;z-index:99;background:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.07)}.logo{font-weight:900;color:#1e40af}.search{max-width:900px;margin:14px auto;padding:0 12px}.search input{width:100%;padding:13px 16px;border-radius:24px;border:1px solid #e2e8f0;outline:none}.wrap{max-width:1320px;margin:auto;padding:0 12px 90px}.sec{font-weight:800;font-size:15px;margin:22px 0 10px;border-left:5px solid #2563eb;padding-left:10px}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.card{background:#fff;border-radius:16px;padding:14px 6px;text-align:center;border:1px solid #e2e8f0;position:relative;min-height:115px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}.card h3{font-size:11px;margin-top:6px}.ico{font-size:28px}.badge{position:absolute;top:6px;right:6px;font-size:8px;padding:3px 6px;border-radius:12px;color:#fff;font-weight:800}.new{background:#22c55e}.hot{background:#ef4444}@media(max-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}#modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:200;padding:14px}#modal.show{display:flex;justify-content:center}.box{background:#fff;width:100%;max-width:700px;border-radius:16px;padding:18px;margin-top:20px}.btn{padding:10px 16px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;margin:4px}input,textarea{width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:8px;margin:6px 0}.help{position:fixed;bottom:16px;right:16px;background:#22c55e;color:#fff;padding:12px 16px;border-radius:26px;font-weight:800;text-decoration:none}</style>
+</head>
+<body>
+<div class="top"><div class="logo">AK AkprintHub - by Lalan</div><a class="btn" href="https://wa.me/916200157277">Cyber Cafe?</a></div>
+<div class="search"><input placeholder="🔎 Search services..." onkeyup="let v=this.value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(v)?'flex':'none')"></div>
+<div class="wrap">
+<div class="sec">Essential & Services</div><div class="grid">
+<div class="card" onclick="openTool('Latest Jobs','https://www.sarkariresult.com.cm/')"><span class="badge new">NEW</span><div class="ico">💼</div><h3>Latest Jobs</h3></div>
+<div class="card" onclick="openTool('Mock Test','https://testbook.com/')"><span class="badge new">NEW</span><div class="ico">📝</div><h3>Mock Test</h3></div>
+<div class="card" onclick="openTool('ID Card Print')"><span class="badge new">NEW</span><div class="ico">🪪</div><h3>ID Card Print</h3></div>
+<div class="card" onclick="openTool('PVC Auto Crop')"><span class="badge new">NEW</span><div class="ico">🖼️</div><h3>PVC Auto Crop</h3></div>
+<div class="card" onclick="openTool('Auto Print')"><span class="badge new">NEW</span><div class="ico">🖨️</div><h3>Auto Print</h3></div>
+<div class="card" onclick="openTool('Passport Photo')"><div class="ico">👩</div><h3>Passport Photo</h3></div>
+<div class="card" onclick="openTool('Photo Crop And Resize')"><div class="ico">✂️</div><h3>Photo Crop And Resize</h3></div>
+<div class="card" onclick="openTool('Resume/CV')"><div class="ico">📄</div><h3>Resume/CV</h3></div>
+<div class="card" onclick="openTool('New Service Post')"><span class="badge new">NEW</span><div class="ico">📑</div><h3>New Service Post</h3></div>
+<div class="card" onclick="openTool('Document Album')"><span class="badge new">NEW</span><div class="ico">📁</div><h3>Document Album</h3></div>
+<div class="card" onclick="openTool('NSDL PAAM ID','https://www.tin-nsdl.com/services/pan/')"><span class="badge hot">HOT</span><div class="ico">🆔</div><h3>NSDL PAAM ID</h3></div>
+<div class="card" onclick="openTool('Payment Locked QR')"><span class="badge hot">HOT</span><div class="ico">🔳</div><h3>Payment Locked QR</h3></div>
+</div>
+<div class="sec" style="border-color:#d946ef">Creative Design Studio</div><div class="grid">
+<div class="card" onclick="openTool('Pro Resume Maker')"><span class="badge new">NEW</span><div class="ico">📄</div><h3>Pro Resume Maker</h3></div>
+<div class="card" onclick="openTool('Marriage Biodata')"><span class="badge new">NEW</span><div class="ico">💍</div><h3>Marriage Biodata</h3></div>
+<div class="card" onclick="openTool('Pro ID Maker')"><span class="badge new">NEW</span><div class="ico">🪪</div><h3>Pro ID Maker</h3></div>
+<div class="card" onclick="openTool('Pro Poster Maker')"><span class="badge new">NEW</span><div class="ico">🎨</div><h3>Pro Poster Maker</h3></div>
+<div class="card" onclick="openTool('Application Maker')"><span class="badge new">NEW</span><div class="ico">📝</div><h3>Application Maker</h3></div>
+<div class="card" onclick="openTool('Shop Promotion Maker')"><span class="badge new">NEW</span><div class="ico">🏪</div><h3>Shop Promotion Maker</h3></div>
+</div>
+<div class="sec" style="border-color:#f59e0b">Smart PDF & Image Tools</div><div class="grid">
+<div class="card" onclick="openTool('JPG To PDF')"><div class="ico">📄</div><h3>JPG To PDF</h3></div>
+<div class="card" onclick="openTool('PDF To JPG')"><div class="ico">🖼️</div><h3>PDF To JPG</h3></div>
+<div class="card" onclick="openTool('PNG To PDF')"><div class="ico">📄</div><h3>PNG To PDF</h3></div>
+<div class="card" onclick="openTool('PNG To JPG')"><div class="ico">🖼️</div><h3>PNG To JPG</h3></div>
+<div class="card" onclick="openTool('Delete PDF Page')"><div class="ico">🗑️</div><h3>Delete PDF Page</h3></div>
+<div class="card" onclick="openTool('Merge PDF')"><div class="ico">🔗</div><h3>Merge PDF</h3></div>
+</div>
+<div class="sec" style="border-color:#10b981">Card Printing Services</div><div class="grid">
+<div class="card" onclick="openTool('Unique ID Card Print','https://myaadhaar.uidai.gov.in/')"><span class="badge hot">HOT</span><div class="ico">👆</div><h3>Unique ID Card Print</h3></div>
+<div class="card" onclick="openTool('Election Card Print','https://voters.eci.gov.in/')"><div class="ico">🗳️</div><h3>Election Card Print</h3></div>
+<div class="card" onclick="openTool('Health Plan Card Print','https://beneficiary.nha.gov.in/')"><span class="badge new">NEW</span><div class="ico">🏥</div><h3>Health Plan Card Print</h3></div>
+<div class="card" onclick="openTool('Tax Id Card Print','https://www.tin-nsdl.com/services/pan/')"><div class="ico">💳</div><h3>Tax Id Card Print</h3></div>
+<div class="card" onclick="openTool('Driving Permit Print','https://parivahan.gov.in/')"><div class="ico">🚗</div><h3>Driving Permit Print</h3></div>
+<div class="card" onclick="openTool('School/College ID')"><div class="ico">🎓</div><h3>School/College ID</h3></div>
+<div class="card" onclick="openTool('Food Subsidy Card Print','https://nfsa.gov.in/')"><span class="badge new">NEW</span><div class="ico">🍚</div><h3>Food Subsidy Card Print</h3></div>
+</div>
+<div class="sec" style="border-color:#ec4899">Portal Service</div><div class="grid">
+<div class="card" onclick="openTool('Census Of India','https://censusindia.gov.in/')"><div class="ico">🏛️</div><h3>Census Of India</h3></div>
+<div class="card" onclick="openTool('Aadhar Beta Service','https://myaadhaar.uidai.gov.in/')"><div class="ico">🆔</div><h3>Aadhar Beta Service</h3></div>
+<div class="card" onclick="openTool('Aadhaar Information','https://myaadhaar.uidai.gov.in/')"><div class="ico">📇</div><h3>Aadhaar Information</h3></div>
+<div class="card" onclick="openTool('PAN Card Service','https://www.tin-nsdl.com/services/pan/')"><div class="ico">💳</div><h3>PAN Card Service</h3></div>
+<div class="card" onclick="openTool('Voter ID Correction','https://voters.eci.gov.in/')"><div class="ico">🗳️</div><h3>Voter ID Correction</h3></div>
+<div class="card" onclick="openTool('Ayushman Bharat','https://beneficiary.nha.gov.in/')"><div class="ico">🏥</div><h3>Ayushman Bharat</h3></div>
+<div class="card" onclick="openTool('Driving Licence','https://parivahan.gov.in/')"><div class="ico">🚗</div><h3>Driving Licence</h3></div>
+<div class="card" onclick="openTool('RC Service','https://vahan.parivahan.gov.in/')"><div class="ico">📘</div><h3>RC Service</h3></div>
+<div class="card" onclick="openTool('Vehicle Service','https://vahan.parivahan.gov.in/')"><div class="ico">🚘</div><h3>Vehicle Service</h3></div>
+<div class="card" onclick="openTool('Birth & Death Certificate','https://crsorgi.gov.in/')"><div class="ico">📜</div><h3>Birth & Death Certificate</h3></div>
+<div class="card" onclick="openTool('E-Challan','https://echallan.parivahan.gov.in/')"><div class="ico">🧾</div><h3>E-Challan</h3></div>
+<div class="card" onclick="openTool('E-Shram Card','https://eshram.gov.in/')"><div class="ico">🪪</div><h3>E-Shram Card</h3></div>
+<div class="card" onclick="openTool('APAAR ID Card','https://apaar.education.gov.in/')"><div class="ico">🆔</div><h3>APAAR ID Card</h3></div>
+<div class="card" onclick="openTool('ABHA Card','https://abha.abdm.gov.in/')"><div class="ico">🏥</div><h3>ABHA Card</h3></div>
+<div class="card" onclick="openTool('PM Fasal Bima','https://pmfby.gov.in/')"><div class="ico">🌾</div><h3>PM Fasal Bima</h3></div>
+<div class="card" onclick="openTool('PMAY-Gramin','https://pmayg.nic.in/')"><div class="ico">🏠</div><h3>PMAY-Gramin</h3></div>
+<div class="card" onclick="openTool('PMAY-Urban','https://pmaymis.gov.in/')"><div class="ico">🏠</div><h3>PMAY-Urban</h3></div>
+<div class="card" onclick="openTool('EPFO','https://www.epfindia.gov.in/')"><div class="ico">👷</div><h3>EPFO</h3></div>
+<div class="card" onclick="openTool('LIC Service','https://licindia.in/')"><div class="ico">❤️</div><h3>LIC Service</h3></div>
+<div class="card" onclick="openTool('E-NAM','https://enam.gov.in/')"><div class="ico">🌱</div><h3>E-NAM</h3></div>
+<div class="card" onclick="openTool('PM SVANidhi','https://pmsvanidhi.mohua.gov.in/')"><div class="ico">🤝</div><h3>PM SVANidhi</h3></div>
+<div class="card" onclick="openTool('Soil Health Card','https://soilhealth.dac.gov.in/')"><div class="ico">🌿</div><h3>Soil Health Card</h3></div>
+<div class="card" onclick="openTool('MKisan Portal','https://mkisan.gov.in/')"><div class="ico">👨‍🌾</div><h3>MKisan Portal</h3></div>
+<div class="card" onclick="openTool('PM Surya Ghar','https://pmsuryaghar.gov.in/')"><div class="ico">☀️</div><h3>PM Surya Ghar</h3></div>
+<div class="card" onclick="openTool('Udyam Aadhaar','https://udyamregistration.gov.in/')"><div class="ico">🏢</div><h3>Udyam Aadhaar</h3></div>
+<div class="card" onclick="openTool('National Scholarship','https://scholarships.gov.in/')"><div class="ico">🎓</div><h3>National Scholarship</h3></div>
+<div class="card" onclick="openTool('Lost/Found Mobile','https://www.ceir.gov.in/')"><div class="ico">📱</div><h3>Lost/Found Mobile</h3></div>
+<div class="card" onclick="openTool('Railway Service','https://www.irctc.co.in/')"><div class="ico">🚆</div><h3>Railway Service</h3></div>
+<div class="card" onclick="openTool('Passport Seva','https://portal2.passportindia.gov.in/')"><div class="ico">🛂</div><h3>Passport Seva</h3></div>
+<div class="card" onclick="openTool('PM Kisan','https://pmkisan.gov.in/')"><div class="ico">👨‍🌾</div><h3>PM Kisan</h3></div>
+<div class="card" onclick="openTool('GST Verification','https://services.gst.gov.in/')"><div class="ico">GST</div><h3>GST Verification</h3></div>
+<div class="card" onclick="openTool('Checkpost Tax','https://vahan.parivahan.gov.in/')"><div class="ico">🚧</div><h3>Checkpost Tax</h3></div>
+<div class="card" onclick="openTool('Vahan Green Sewa')"><div class="ico">🟢</div><h3>Vahan Green Sewa</h3></div>
+<div class="card" onclick="openTool('PUC Service','https://vahan.parivahan.gov.in/')"><div class="ico">PUC</div><h3>PUC Service</h3></div>
+<div class="card" onclick="openTool('National Payments','https://www.npci.org.in/')"><div class="ico">💸</div><h3>National Payments</h3></div>
+<div class="card" onclick="openTool('National Consumer','https://consumerhelpline.gov.in/')"><div class="ico">👨‍👩‍👧</div><h3>National Consumer</h3></div>
+<div class="card" onclick="openTool('National Career Service','https://www.ncs.gov.in/')"><div class="ico">🏃</div><h3>National Career Service</h3></div>
+<div class="card" onclick="openTool('CIBIL Score','https://www.cibil.com/')"><div class="ico">📊</div><h3>CIBIL Score</h3></div>
+<div class="card" onclick="openTool('INDANE GAS','https://indane.co.in/')"><div class="ico">⛽</div><h3>INDANE GAS</h3></div>
+<div class="card" onclick="openTool('HP GAS','https://www.hindustanpetroleum.com/')"><div class="ico">⛽</div><h3>HP GAS</h3></div>
+<div class="card" onclick="openTool('BHARAT GAS','https://www.bharatpetroleum.com/')"><div class="ico">⛽</div><h3>BHARAT GAS</h3></div>
+<div class="card" onclick="openTool('Unique Disability ID','https://www.swavlambancard.gov.in/')"><div class="ico">♿</div><h3>Unique Disability ID</h3></div>
+<div class="card" onclick="openTool('Swachh Bharat','https://swachhbharatmission.gov.in/')"><div class="ico">📚</div><h3>Swachh Bharat</h3></div>
+<div class="card" onclick="openTool('Fancy Mobile Number','https://fancy.parivahan.gov.in/')"><div class="ico">VIP</div><h3>Fancy Number</h3></div>
+</div></div>
+<a class="help" href="https://wa.me/916200157277">💬 Help & Feedback</a>
+<div id="modal" onclick="if(event.target.id==='modal')this.classList.remove('show')"><div class="box"><div style="display:flex;justify-content:space-between"><h3 id="mTitle"></h3><button class="btn" onclick="modal.classList.remove('show')">✕</button></div><div id="mBody" style="margin-top:12px"></div></div></div>
+<script>
+let curLink='';
+function openTool(name,link=''){
+curLink=link;document.getElementById('mTitle').innerText=name;
+let h='';
+if(name.includes('JPG To PDF')||name.includes('PNG To PDF')){h=`<input type="file" id="imgIn" accept="image/*"><button class="btn" onclick="convertPdf()">Convert PDF</button><p id="msg"></p>`}
+else if(link){h=`<p><b>${name}</b> Official Link:</p><div style="background:#f0f9ff;padding:10px;border-radius:8px;word-break:break-all">${link}</div><a class="btn" href="${link}" target="_blank">🚀 Open Portal</a>`}
+else{h=`<p><b>${name}</b> tool working hai.</p><button class="btn" onclick="alert('✅ Done')">Start</button>`}
+document.getElementById('mBody').innerHTML=h;document.getElementById('modal').classList.add('show');
+}
+function convertPdf(){let f=document.getElementById('imgIn').files[0];if(!f)return alert('Image select karo');let r=new FileReader();r.onload=e=>{let {jsPDF}=window.jspdf;let d=new jsPDF();d.addImage(e.target.result,'JPEG',10,10,190,0);d.save('akprint.pdf');document.getElementById('msg').innerText='✅ Downloaded'};r.readAsDataURL(f)}
+</script>
+</body>
+                                             </html>
