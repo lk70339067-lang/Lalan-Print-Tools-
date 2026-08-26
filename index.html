@@ -29,23 +29,4 @@ const DATA={
 "Swachhbharatmi":[["Apply Online","https://swachhbharatmission.gov.in/"],["Login","https://swachhbharatmission.gov.in/"],["Track Application Status","https://swachhbharatmission.gov.in/"]],
 "Fancy Mobile Number":[["Fancy Number Booking","https://fancy.parivahan.gov.in/"]]
 };
-let active=null;
-function render(){
- let g=document.getElementById('grid');g.innerHTML='';
- Object.keys(DATA).forEach(k=>{
-  let c=document.createElement('div');c.className='card';if(active===k)c.classList.add('active');
-  let icon=k.includes('Driving')?'🪪':k.includes('RC')?'📒':k.includes('Vehicle')?'🚗':k.includes('Birth')?'📜':k.includes('Challan')?'🧾':k.includes('E-Shram')?'🪪':k.includes('APAAR')?'🆔':k.includes('ABHA')?'🪪':k.includes('Fasal')?'👨‍🌾':k.includes('PMAY')?'🏠':k.includes('EPFO')?'🛡️':k.includes('MKisan')?'👨‍🌾':k.includes('Surya')?'☀️':k.includes('Railway')?'🚂':k.includes('Passport')?'🛂':k.includes('Kisan')?'👨‍🌾':k.includes('INDANE')?'⛽':k.includes('HP GAS')?'⛽':k.includes('BHARAT')?'⛽':k.includes('Disability')?'♿':k.includes('Swachh')?'🚽':k.includes('Fancy')?'👑':'🔗';
-  c.innerHTML='<div class="ico">'+icon+'</div><h3>'+k+'</h3>';c.onclick=()=>toggle(k,c);g.appendChild(c);
- });
-}
-function toggle(key,el){
- let grid=document.getElementById('grid');let existing=document.querySelector('.expand');
- if(active===key){if(existing)existing.remove();active=null;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));return;}
- if(existing)existing.remove();document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));el.classList.add('active');active=key;
- let items=DATA[key]||[];let row=document.createElement('div');row.className='expand';let html='<div class="expand-head"><span>'+key+'</span><span class="close" onclick="closeExpand()">✕</span></div><div class="subgrid">';items.forEach(([name,link,ty])=>{let orange=ty==='orange'?' orange':'';html+='<a class="sub'+orange+'" href="'+link+'" target="_blank">↗ '+name+'</a>';});html+='</div>';row.innerHTML=html;
- let cards=Array.from(grid.children).filter(e=>!e.classList.contains('expand'));let idx=cards.indexOf(el);let cols=window.innerWidth<=900?3:6;let rowEnd=Math.ceil((idx+1)/cols)*cols;let before=grid.children[rowEnd]||null;grid.insertBefore(row,before);row.scrollIntoView({behavior:'smooth',block:'center'});
-}
-function closeExpand(){let e=document.querySelector('.expand');if(e)e.remove();active=null;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));}
-render();
-</script>
-</body></html>                                            
+
