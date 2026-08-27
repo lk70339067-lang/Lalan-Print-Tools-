@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK PrintHub By Lalan - 164+ Links</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#f5f7fa;color:#1e293b}
+.header{background:#0f172a;color:#fff;padding:20px;text-align:center;position:sticky;top:0;z-index:10}
+.header h1{font-size:24px}
+.header p{opacity:.8;margin-top:4px;font-size:14px}
+.search{max-width:700px;margin:20px auto;padding:0 16px}
+.search input{width:100%;padding:15px 20px;border-radius:30px;border:2px solid #cbd5e1;font-size:16px;outline:none}
+.search input:focus{border-color:#0f172a}
+.container{max-width:1100px;margin:0 auto;padding:0 16px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:#fff;border-radius:14px;padding:16px;border:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.card h3{font-size:14px;line-height:1.4}
+.card a{background:#0f172a;color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;margin-left:12px;white-space:nowrap}
+.tag{background:#e0f2fe;color:#0369a1;font-size:10px;padding:3px 8px;border-radius:10px;margin-bottom:6px;display:inline-block;font-weight:600}
+.footer{text-align:center;padding:30px;color:#64748b;font-size:13px}
+</style>
+</head>
+<body>
+<div class="header"><h1>AK PrintHub By Lalan</h1><p>Maner, Bihar - 164+ Sarkari Portal Links</p></div>
+<div class="search"><input id="q" type="text" placeholder="Search karo... DL, RC, Aadhaar, Vahan, Challan..." onkeyup="filterData()"></div>
+<div class="container" id="list"></div>
+<div class="footer">Made with ❤️ by Lalan - Maner, Patna</div>
+
+<script>
+const DATA=[
+["Driving Licence (DL) Service","https://parivahan.gov.in/","DL"],
+["New DL Apply","https://parivahan.gov.in/parivahan/","DL"],
+["DL Status Check","https://parivahan.gov.in/","DL"],
+["Find DL Number","https://parivahan.gov.in/","DL"],
+["RC Official Website","https://vahan.parivahan.gov.in/","RC"],
+["RC Mobile Number Update","https://vahan.parivahan.gov.in/","RC"],
+["Owner Details by Number","https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml","Vehicle"],
+["Print Registration Certificate","https://vahan.parivahan.gov.in/","RC"],
+["Know Your Vehicle Details","https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml","Vehicle"],
+["Vehicle / Owner Details","https://vahan.parivahan.gov.in/","Vehicle"],
+["CNG / Vahan Apply","https://vahan.parivahan.gov.in/","Vehicle"],
+["Fancy Number Search","https://fancy.parivahan.gov.in/fancy/","Vehicle"],
+["National Permit Online Payment","https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml","Permit"],
+["National Permit Status","https://vahan.parivahan.gov.in/","Permit"],
+["Print Permit Receipt","https://vahan.parivahan.gov.in/","Permit"],
+["FASTag Status Check","https://vahan.parivahan.gov.in/","FASTag"],
+["Birth & Death Certificate","https://crsorgi.gov.in/","Certificate"],
+["E-Challan / Virtual Court","https://echallan.parivahan.gov.in/","Challan"],
+["E-Challan Pay Online","https://echallan.parivahan.gov.in/index/accused-challan","Challan"],
+["E-Shram Card Apply","https://eshram.gov.in/","Eshram"],
+["E-Shram Card Download","https://eshram.gov.in/","Eshram"],
+["E-Shram Card Number Find","https://eshram.gov.in/","Eshram"],
+["APAAR ID Card Download","https://apaar.education.gov.in/","Education"],
+["ABC Portal (Academic Bank)","https://www.abc.gov.in/","Education"],
+["ABHA Card Apply by Aadhaar","https://abha.abdm.gov.in/abha/v3/","Health"],
+["ABHA Card Download","https://abha.abdm.gov.in/abha/v3/","Health"],
+["PM Fasal Bima Yojana","https://pmfby.gov.in/","PMFBY"],
+["PMAY Gramin Payment Check","https://pmayg.nic.in/","PMAY"],
+["PMAY Urban New Apply","https://pmaymis.gov.in/","PMAY"],
+["Aadhaar Download","https://myaadhaar.uidai.gov.in/","Aadhaar"],
+["Aadhaar Status","https://myaadhaar.uidai.gov.in/","Aadhaar"],
+["PAN Apply","https://www.tin-nsdl.com/services/pan/","PAN"],
+["Voter ID Apply","https://voters.eci.gov.in/","Voter"]
+];
+
+const list=document.getElementById('list');
+function render(arr){
+  list.innerHTML='';
+  arr.forEach(i=>{
+    list.innerHTML+=`<div class="card"><div><span class="tag">${i[2]}</span><h3>${i[0]}</h3></div><a href="${i[1]}" target="_blank">Open</a></div>`;
+  });
+}
+function filterData(){
+  let q=document.getElementById('q').value.toLowerCase();
+  render(DATA.filter(d=>d[0].toLowerCase().includes(q) || d[2].toLowerCase().includes(q)));
+}
+render(DATA);
+</script>
+</body>
+  </html>
