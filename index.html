@@ -1,46 +1,44 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AK Tools by Lalan - All 164 in One</title>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AK Tools by Lalan - Photo Wala</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f1f5f9}
-.top{background:#0f172a;color:#fff;padding:14px;text-align:center;position:sticky;top:0;z-index:20}
-.top b{font-size:19px}.top span{color:#22c55e;font-size:11px;display:block}
+.top{background:#0f172a;color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:10}
+.top b{font-size:18px}.top span{color:#22c55e;font-size:11px;display:block}
 .wrap{max-width:1200px;margin:auto;padding:10px 10px 80px}
-.sec{font-weight:800;font-size:13px;margin:16px 0 8px;border-left:4px solid #22c55e;padding-left:8px}
+.sec{font-weight:800;font-size:13px;margin:16px 0 8px;border-left:4px solid #ec4899;padding-left:8px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}@media(min-width:600px){.grid{grid-template-columns:repeat(4,1fr)}}
-.card{background:#fff;border:1.5px solid #dcfce7;border-radius:12px;padding:14px 4px;text-align:center;cursor:pointer;min-height:85px;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,.05);text-decoration:none;color:#1e293b}
-.card h3{font-size:10px;margin-top:6px;font-weight:600}
-.expand{grid-column:1/-1;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px;margin:6px 0}
+.card{background:#fff;border:1.5px solid #dcfce7;border-radius:14px;padding:10px 4px;text-align:center;min-height:95px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-decoration:none;color:#1e293b;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.card.ico{font-size:32px}.card h3{font-size:10px;margin-top:6px;font-weight:700}
+.expand{grid-column:1/-1;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:12px;margin:6px 0}
 .subgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
-.sub{background:#fff;border:1px solid #e2e8f0;padding:10px;border-radius:8px;font-size:10px;font-weight:600;text-decoration:none;color:#334155;display:block}
-.sub:hover{border-color:#22c55e;background:#f0fdf4}
+.sub{background:#f8fafc;border:1px solid #e2e8f0;padding:10px;border-radius:8px;font-size:10px;font-weight:600;text-decoration:none;color:#334155;display:flex;gap:6px;align-items:center}
 </style></head><body>
-<div class="top"><b>AK Tools by Lalan - Maner Patna</b><span>164+ Portal - Sabhi Ek Sath - Click Karo Khulega</span></div>
+<div class="top"><b>AK Tools by Lalan - Maner Patna</b><span>164+ Portal - Photo Ke Sath - Sabhi Alag Alag</span></div>
 <div class="wrap">
-<div class="sec">🔥 Direct Links - Click Karo Direct Khulega (30 Links)</div>
+<div class="sec">🔥 Direct Links - Photo Ke Sath (30 Links)</div>
 <div class="grid" id="simpleGrid"></div>
-<div class="sec">📂 Category Wise - Click Karo Andar Links Khulenge (82+ Links)</div>
+<div class="sec">📂 Category Wise - Folder Me Andar Links (82+ Links)</div>
 <div class="grid" id="grid"></div>
 </div>
 <script>
-const SIMPLE = [
-["PM SVANidhi","https://pmsvanidhi.mohua.gov.in"],["PM Surya Ghar","https://pmsuryaghar.gov.in"],["Udyam Aadhaar","https://udyamregistration.gov.in"],["National Scholarship","https://scholarships.gov.in"],["Railway Service","https://www.irctc.co.in"],["Passport Seva","https://portal2.passportindia.gov.in"],["GST Verification","https://services.gst.gov.in"],["PUC Service","https://puc.parivahan.gov.in"],["Income Tax","https://www.incometax.gov.in"],["DigiLocker","https://www.digilocker.gov.in"],["UMANG App","https://web.umang.gov.in"],["PFMS","https://pfms.nic.in"],["NREGA Job Card","https://nrega.nic.in"],["PM Kisan","https://pmkisan.gov.in"],["E-District Bihar","https://edistrict.bih.nic.in"],["Bihar Bhumi","https://biharbhumi.bihar.gov.in"],["Bihar Ration Card","https://epds.bihar.gov.in"],["Post Office","https://www.indiapost.gov.in"],["CSC Service","https://csc.gov.in"],["Aadhar PVC Order","https://myaadhaar.uidai.gov.in/genricPVC"],["Voter List","https://electoralsearch.eci.gov.in"],["GST Return","https://www.gst.gov.in"],["NPS","https://www.npscra.nsdl.co.in"],["LPG Gas Booking","https://www.mylpg.in"],["IRCTC PNR","https://www.irctc.co.in"],["E-Hospital","https://www.ehospital.gov.in"],["CoWIN Vaccine","https://www.cowin.gov.in"],["RTI","https://rtionline.gov.in"],["CPGRAMS Complaint","https://pgportal.gov.in"]
+const SIMPLE=[
+["PM SVANidhi","🤝","https://pmsvanidhi.mohua.gov.in"],["PM Surya Ghar","☀️","https://pmsuryaghar.gov.in"],["Udyam Aadhaar","🏭","https://udyamregistration.gov.in"],["National Scholarship","🎓","https://scholarships.gov.in"],["Railway Service","🚂","https://www.irctc.co.in"],["Passport Seva","🛂","https://portal2.passportindia.gov.in"],["GST Verification","🧾","https://services.gst.gov.in"],["PUC Service","🏅","https://puc.parivahan.gov.in"],["Income Tax","💰","https://www.incometax.gov.in"],["DigiLocker","🔐","https://www.digilocker.gov.in"],["UMANG App","📱","https://web.umang.gov.in"],["PFMS","🏦","https://pfms.nic.in"],["NREGA Job Card","👷","https://nrega.nic.in"],["PM Kisan","👨‍🌾","https://pmkisan.gov.in"],["E-District Bihar","🏛️","https://edistrict.bih.nic.in"],["Bihar Bhumi","🌾","https://biharbhumi.bihar.gov.in"],["Bihar Ration Card","🍚","https://epds.bihar.gov.in"],["Post Office","📮","https://www.indiapost.gov.in"],["CSC Service","🏪","https://csc.gov.in"],["Aadhar PVC Order","🆔","https://myaadhaar.uidai.gov.in/genricPVC"],["Voter List","🗳️","https://electoralsearch.eci.gov.in"],["GST Return","📑","https://www.gst.gov.in"],["NPS","👴","https://www.npscra.nsdl.co.in"],["LPG Gas Booking","⛽","https://www.mylpg.in"],["IRCTC PNR","🎫","https://www.irctc.co.in"],["E-Hospital","🏥","https://www.ehospital.gov.in"],["CoWIN Vaccine","💉","https://www.cowin.gov.in"],["RTI","📄","https://rtionline.gov.in"],["CPGRAMS Complaint","📢","https://pgportal.gov.in"]
 ];
 const DATA={
-"EPFO":[["UAN Login","https://unifiedportal-mem.epfindia.gov.in/"],["Passbook","https://passbook.epfindia.gov.in/"],["Find UAN","https://unifiedportal-mem.epfindia.gov.in/"]],
-"PM Surya Ghar Yojana":[["Apply","https://pmsuryaghar.gov.in/"],["Benefits","https://pmsuryaghar.gov.in/"],["Vendors","https://pmsuryaghar.gov.in/"],["Consumer Login","https://pmsuryaghar.gov.in/"]],
-"Railway":[["PNR Check","https://www.indianrail.gov.in/"],["Train Check","https://enquiry.indianrail.gov.in/"],["Seat Check","https://www.irctc.co.in/"]],
-"Passport Seva":[["Login","https://portal2.passportindia.gov.in/"],["Apply Passport","https://portal2.passportindia.gov.in/"],["Track Application","https://portal2.passportindia.gov.in/"]],
-"PM Kisan":[["Status Check","https://pmkisan.gov.in/"],["Find Reg No","https://pmkisan.gov.in/"],["KYC","https://pmkisan.gov.in/"]],
-"INDANE GAS":[["Subsidy Check","https://indane.co.in/"],["Ujjwala Apply","https://indane.co.in/"],["Find LPG ID","https://indane.co.in/"],["Login","https://indane.co.in/"]],
-"HP GAS":[["Subsidy Check","https://www.hindustanpetroleum.com/"],["Ujjwala Apply","https://www.hindustanpetroleum.com/"],["Book Cylinder","https://www.hindustanpetroleum.com/"]],
+"EPFO":[["UAN Login","https://unifiedportal-mem.epfindia.gov.in/"],["Passbook","https://passbook.epfindia.gov.in/"]],
+"PM Surya Ghar":[["Apply","https://pmsuryaghar.gov.in/"],["Benefits","https://pmsuryaghar.gov.in/"]],
+"Railway":[["PNR Check","https://www.indianrail.gov.in/"],["Train Check","https://enquiry.indianrail.gov.in/"]],
+"Passport Seva":[["Login","https://portal2.passportindia.gov.in/"],["Apply","https://portal2.passportindia.gov.in/"]],
+"PM Kisan":[["Status Check","https://pmkisan.gov.in/"],["KYC","https://pmkisan.gov.in/"]],
+"INDANE GAS":[["Subsidy Check","https://indane.co.in/"],["Ujjwala Apply","https://indane.co.in/"]],
+"HP GAS":[["Subsidy Check","https://www.hindustanpetroleum.com/"],["Book Cylinder","https://www.hindustanpetroleum.com/"]],
 "BHARAT GAS":[["Book Cylinder","https://www.bharatpetroleum.com/"],["Subsidy Check","https://www.bharatpetroleum.com/"]],
-"Disability ID":[["Apply Online","https://www.swavlambancard.gov.in/"],["Track Application","https://www.swavlambancard.gov.in/"]],
-"Swachh Bharat":[["Apply Online","https://swachhbharatmission.gov.in/"],["Login","https://swachhbharatmission.gov.in/"]],
+"Disability ID":[["Apply Online","https://www.swavlambancard.gov.in/"]],
+"Swachh Bharat":[["Apply Online","https://swachhbharatmission.gov.in/"]],
 "Fancy Number":[["Fancy Booking","https://fancy.parivahan.gov.in/"]]
 };
-let active=null;
-function renderSimple(){let g=document.getElementById('simpleGrid');g.innerHTML='';SIMPLE.forEach(([n,l])=>{let a=document.createElement('a');a.className='card';a.href=l;a.target='_blank';a.innerHTML='<div style=font-size:22px>🔗</div><h3>'+n+'</h3>';g.appendChild(a);});}
-const grid=document.getElementById('grid');
-function render(){grid.innerHTML='';Object.keys(DATA).forEach(k=>{let d=document.createElement('div');d.className='card';d.innerHTML='<div style=font-size:22px>📁</div><h3>'+k+'</h3>';d.onclick=()=>openBox(k);grid.appendChild(d);});}
-function openBox(k){let old=document.querySelector('.expand');if(active===k){if(old)old.remove();active=null;render();return;}if(old)old.remove();active=k;render();let cards=[...document.querySelectorAll('#grid.card')];let idx=cards.findIndex(c=>c.textContent.includes(k));let box=document.createElement('div');box.className='expand';let html='<div style=display:flex;justify-content:space-between;font-weight:800;font-size:12px><span>'+k+'</span><span onclick=this.parentElement.parentElement.remove();active=null;render() style=cursor:pointer;background:#fff;border:1px solid #ddd;border-radius:6px;padding:2px 8px>✕</span></div><div class=subgrid>';DATA[k].forEach(([n,l])=>{html+='<a class=sub href='+l+' target=_blank>↗ '+n+'</a>';});html+='</div>';box.innerHTML=html;let cols=window.innerWidth<600?2:4;let pos=Math.ceil((idx+1)/cols)*cols;grid.insertBefore(box,grid.children[pos]||null);}
+function renderSimple(){let g=document.getElementById('simpleGrid');g.innerHTML='';SIMPLE.forEach(([n,i,l])=>{let a=document.createElement('a');a.className='card';a.href=l;a.target='_blank';a.innerHTML='<div class=ico>'+i+'</div><h3>'+n+'</h3>';g.appendChild(a);});}
+const grid=document.getElementById('grid');let active=null;
+function render(){grid.innerHTML='';Object.keys(DATA).forEach(k=>{let d=document.createElement('div');d.className='card';let ico=k.includes('EPFO')?'🛡️':k.includes('Surya')?'☀️':k.includes('Railway')?'🚂':k.includes('Passport')?'🛂':k.includes('Kisan')?'👨‍🌾':k.includes('INDANE')?'⛽':k.includes('HP')?'⛽':k.includes('BHARAT')?'⛽':k.includes('Disability')?'♿':k.includes('Swachh')?'🚽':k.includes('Fancy')?'👑':'📁';d.innerHTML='<div class=ico>'+ico+'</div><h3>'+k+'</h3>';d.onclick=()=>openBox(k);grid.appendChild(d);});}
+function openBox(k){let old=document.querySelector('.expand');if(active===k){if(old)old.remove();active=null;render();return;}if(old)old.remove();active=k;render();let cards=[...document.querySelectorAll('#grid.card')];let idx=cards.findIndex(c=>c.textContent.includes(k));let box=document.createElement('div');box.className='expand';let html='<div style=display:flex;justify-content:space-between;font-weight:800;font-size:12px'><span>📁 '+k+'</span><span onclick=this.parentElement.parentElement.remove();active=null;render() style=cursor:pointer;background:#fff;border:1px solid #ddd;border-radius:6px;padding:2px 8px>✕</span></div><div class=subgrid>';DATA[k].forEach(([n,l])=>{html+='<a class=sub href='+l+' target=_blank>↗ '+n+'</a>';});html+='</div>';box.innerHTML=html;let cols=window.innerWidth<600?2:4;let pos=Math.ceil((idx+1)/cols)*cols;grid.insertBefore(box,grid.children[pos]||null);}
 renderSimple();render();
 </script></body></html>
