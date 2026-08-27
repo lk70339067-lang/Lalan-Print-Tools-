@@ -1,1 +1,116 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK AkprintHub - Sabhi Ka - Final by Lalan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,Arial}
+body{background:#f6fbf8}
+.top{position:sticky;top:0;z-index:99;background:#fff;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 8px rgba(0,0,0,.06);border-bottom:1px solid #eef2f7}
+.logo{display:flex;align-items:center;gap:6px;font-weight:800;font-size:15px}
+.logo b{background:#0f172a;color:#fff;padding:3px 7px;border-radius:6px;font-size:14px}
+.wrap{max-width:1280px;margin:auto;padding:8px 8px 100px}
+.sec{font-weight:800;font-size:13px;margin:14px 0 8px;padding-left:8px;border-left:3px solid #ec4899}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1.3px solid #d7f0df;border-radius:14px;padding:10px 4px;text-align:center;min-height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:.12s}
+.card.active{border-color:#7c3aed;box-shadow:0 0 0 2px #ede9fe inset}
+.card.active h3{color:#7c3aed}
+.card h3{font-size:10.2px;line-height:1.2;margin-top:6px;font-weight:700;color:#1e293b}
+.ico{font-size:28px}
+.expand{grid-column:1/-1;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:14px;padding:14px;margin:4px 0 10px}
+.expand-head{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:13px;margin-bottom:12px}
+.close{cursor:pointer;background:#fff;border:1px solid #e2e8f0;border-radius:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.subgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:700px){.subgrid{grid-template-columns:repeat(1,1fr)}}
+.sub{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 10px;font-size:11px;font-weight:600;color:#334155;text-decoration:none}
+.sub:hover{border-color:#2563eb;background:#eff6ff}
+.sub.i{width:18px;height:18px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+.sub.orange{background:#fffbeb;border-color:#fde68a}
+.help{position:fixed;bottom:14px;right:14px;background:#22c55e;color:#fff;padding:11px 16px;border-radius:26px;font-weight:800;text-decoration:none;z-index:60;font-size:12px}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo"><b>AK</b> <span style="color:#1e40af">AkprintHub</span> <span style="font-size:9px;color:#64748b">by TechnicalMehta</span></div><div style="font-size:11px">Home Services Latest Jobs Pricing More <span style="background:#ff4d2d;color:#fff;padding:5px 10px;border-radius:18px">Cyber Cafe?</span></div></div>
+<div class="wrap"><div class="sec">Portal Service - Sabhi Ka Exact Clone</div><div class="grid" id="grid"></div></div>
+<a class="help" href="https://wa.me/916200157277">💬 Help & Feedback</a>
+<script>
+const DATA={
+"Driving Licence Service":[["DL Mobile Number Update","https://parivahan.gov.in/"],["New DL Apply","https://parivahan.gov.in/"],["DL Status","https://parivahan.gov.in/"],["DL Download","https://parivahan.gov.in/"],["Find DL Number","https://parivahan.gov.in/"],["Find DL Application Number","https://parivahan.gov.in/"],["Official Website","https://parivahan.gov.in/"]],
+"RC Service (Registration...":[["RC Mobile Number Update","https://vahan.parivahan.gov.in/"],["Owner Details","https://vahan.parivahan.gov.in/"],["Print Registration Certificate","https://vahan.parivahan.gov.in/"],["Know Vehicle Details","https://vahan.parivahan.gov.in/"],["Add Nominee Details","https://vahan.parivahan.gov.in/"]],
+"Vehicle Service":[["Owner Details","https://vahan.parivahan.gov.in/"],["CNG VAHAN/Apply","https://vahan.parivahan.gov.in/"],["CNG Track Application Status","https://vahan.parivahan.gov.in/"],["Vehicle Fitness Testing Booking","https://vahan.parivahan.gov.in/"],["Fancy Number Search","https://fancy.parivahan.gov.in/"],["Online Payment of National...","https://vahan.parivahan.gov.in/"],["National Permit Check...","https://vahan.parivahan.gov.in/"],["Check Failed Transactions...","https://vahan.parivahan.gov.in/"],["Print Permit Receipt","https://vahan.parivahan.gov.in/"],["Dispose Pending Transactions","https://vahan.parivahan.gov.in/"],["Show all Payment Details","https://vahan.parivahan.gov.in/"],["ALL INDIA TOURIST PERMIT","https://vahan.parivahan.gov.in/"],["FASTag Status","https://vahan.parivahan.gov.in/"]],
+"Birth & Death Cirtificate":[["All Forms","https://crsorgi.gov.in/"],["MCCD Form","https://crsorgi.gov.in/"],["Public Login","https://crsorgi.gov.in/"],["Official Website","https://crsorgi.gov.in/"]],
+"E-Challan":[["Virtual Court Challan Pay","https://echallan.parivahan.gov.in/"],["E-Challan Chack","https://echallan.parivahan.gov.in/"],["E-Challan Pay Status...","https://echallan.parivahan.gov.in/"],["Vahan PGI","https://vahan.parivahan.gov.in/"]],
+"E-Shram Card":[["Eshram Card Apply (Platform...","https://eshram.gov.in/"],["Eshram Card Apply","https://register.eshram.gov.in/"],["Eshram Card Download","https://eshram.gov.in/"],["Eshram Card Download(UAN)","https://eshram.gov.in/"],["Eshram Card Number Find","https://eshram.gov.in/"],["Eshram Card CSC Login","https://eshram.gov.in/"]],
+"APAAR ID Card":[["New Apply","https://apaar.education.gov.in/"],["Apaar Login","https://apaar.education.gov.in/"],["ABC Portal","https://www.abc.gov.in/"]],
+"ABHA Card (Ayushman...":[["Abha Card Apply By Aadhaar","https://abha.abdm.gov.in/"],["Abha Card Apply By Driving...","https://abha.abdm.gov.in/"],["Abha Card Download","https://abha.abdm.gov.in/"],["Abha Card E-KYC","https://abha.abdm.gov.in/"],["Abha Card Number Find","https://abha.abdm.gov.in/"],["Abha Card Track/Enrolment...","https://abha.abdm.gov.in/"],["Abha Card Login","https://abha.abdm.gov.in/"]],
+"Pradhan Mantri Fasal Bima...":[["New Farmer Registration","https://pmfby.gov.in/"],["Self Registration","https://pmfby.gov.in/"],["Farmer Login","https://pmfby.gov.in/"],["Official Website/Self Login","https://pmfby.gov.in/"],["Chack Application Status","https://pmfby.gov.in/"]],
+"PMAY-Gramin (Pradhan Man...":[["Payment/Kist Chack","https://pmayg.nic.in/"],["New List Chack","https://pmayg.nic.in/"],["Registration No Find","https://pmayg.nic.in/"],["Registration Number List","https://pmayg.nic.in/"],["New Rural Housing Report","https://pmayg.nic.in/"],["Search Beneficiary Details","https://pmayg.nic.in/"],["FTO Tracking Rural","https://pmayg.nic.in/"]],
+"PMAY-Urban/Sehri...":[["PMAY New Apply-Urban","https://pmaymis.gov.in/"],["Track Assessment Status-Urban","https://pmaymis.gov.in/"],["Track SURVEY-Urban","https://pmaymis.gov.in/"],["PMAY Check-Eligibility-Urban","https://pmaymis.gov.in/"],["Scheme Guidelines...","https://pmaymis.gov.in/"]],
+"EPFO (Employee'...":[["UAN Login Employees (EPFO)","https://unifiedportal-mem.epfindia.gov.in/"],["EPF Passbook (EPFO)","https://passbook.epfindia.gov.in/"],["Find UAN (EPFO)","https://unifiedportal-mem.epfindia.gov.in/"]],
+"LIC Service (Life Insurance...":[["LIC e-Services","https://ebiz.licindia.in/"]],
+"E-NAM (National...":[["Farmer Registration","https://enam.gov.in/"]],
+"PM SVANidhi Yojana":[["Apply Online","https://pmsvanidhi.mohua.gov.in/"]],
+"Soil Health Card":[["Soil Health Portal","https://soilhealth.dac.gov.in/"]],
+"MKisan Portal":[["Registration for KSEWA...","https://mkisan.gov.in/"],["KSewa Login (mKisan)","https://mkisan.gov.in/"],["Farmer Registration (mKisan)","https://mkisan.gov.in/"],["Login Registration (mKisan)","https://mkisan.gov.in/"]],
+"PM Surya Ghar Yojana (Muft...":[["Apply","https://pmsuryaghar.gov.in/"],["Benefits Details","https://pmsuryaghar.gov.in/"],["Consumer Financing Options","https://pmsuryaghar.gov.in/"],["Find Registered Vendors","https://pmsuryaghar.gov.in/"],["Apply/Login","https://pmsuryaghar.gov.in/consumerRegistration"],["Vendor Registration","https://pmsuryaghar.gov.in/vendorRegistration"],["Vendor Financing Options","https://pmsuryaghar.gov.in/"]],
+"Udyam Aadhaar Service (MSME)":[["Udyam Registration","https://udyamregistration.gov.in/"]],
+"National Scholarship...":[["Fresh Application","https://scholarships.gov.in/"]],
+"Lost/Found Mobile &...":[["Block Lost Mobile","https://www.ceir.gov.in/"]],
+"Railway Service":[["PNR Check","https://www.indianrail.gov.in/"],["Train Check","https://enquiry.indianrail.gov.in/"],["Train Seat Check","https://www.irctc.co.in/"],["Fare Enquiry","https://enquiry.indianrail.gov.in/"],["Train Number Track","https://enquiry.indianrail.gov.in/"]],
+"Passport Seva Service":[["Passport Login","https://portal2.passportindia.gov.in/"],["User Registration","https://portal2.passportindia.gov.in/"],["Apply Passport","https://portal2.passportindia.gov.in/"],["Check Passport Appointment...","https://portal2.passportindia.gov.in/"],["Track Passport Application...","https://portal2.passportindia.gov.in/"],["Passport Police Clearance...","https://portal2.passportindia.gov.in/"],["Annexures/Affidavits Forms","https://portal2.passportindia.gov.in/"]],
+"PM Kisan (Kisan Samman Nidh...":[["PM Kisan Status Chack","https://pmkisan.gov.in/"],["Find Registration Number (PM...","https://pmkisan.gov.in/"],["PM Kisan New Farm Apply","https://pmkisan.gov.in/"],["Update Farm (PM Kisan)","https://pmkisan.gov.in/"],["PM Kisan Status Chack (CSC)","https://pmkisan.gov.in/"],["Update of Missing Beneficiary...","https://pmkisan.gov.in/"],["Update Mobile Number (PM...","https://pmkisan.gov.in/"],["Recovery Form Ineligible Farm...","https://pmkisan.gov.in/"],["PM Kisan KYC","https://pmkisan.gov.in/"]],
+"GST Verification":[["GST Search","https://services.gst.gov.in/"]],
+"Chackpost Tax/Road Tax":[["Road Tax Pay","https://vahan.parivahan.gov.in/"]],
+"Vahan Green Sewa":[["Green Tax Pay","https://vahan.parivahan.gov.in/"]],
+"PUC Service (Pollution Und...":[["PUC Certificate","https://vahan.parivahan.gov.in/"]],
+"National Payments...":[["UPI Status","https://www.npci.org.in/"]],
+"National Consumer...":[["Complaint Register","https://consumerhelpline.gov.in/"]],
+"National Career Service (NCS)":[["Job Seeker Login","https://www.ncs.gov.in/"]],
+"Chack Free CIBIL Score":[["Free CIBIL Check","https://www.cibil.com/"]],
+"INDANE GAS":[["Check Gas Subsidy","https://indane.co.in/"],["Give up Subsidy","https://indane.co.in/"],["Online Application Ujjwala","https://indane.co.in/"],["Find Your LPG ID","https://indane.co.in/"],["User Login","https://indane.co.in/"],["User Register","https://indane.co.in/"],["INDANE GAS Official Website","https://indane.co.in/"],["PMUY Official Website","https://pmuy.gov.in/"],["KYC APP For Android","https://play.google.com/"],["Face RD App","https://play.google.com/"],["KYC Video Hindi","https://youtube.com/"],["New KYC Form","https://indane.co.in/","orange"],["DBTL Form","https://indane.co.in/","orange"]],
+"HP GAS":[["Check Gas Subsidy","https://www.hindustanpetroleum.com/"],["Give up Subsidy","https://www.hindustanpetroleum.com/"],["Online Application Ujjwala","https://www.hindustanpetroleum.com/"],["Find Your LPG ID","https://www.hindustanpetroleum.com/"],["User Login","https://www.hindustanpetroleum.com/"],["User Register","https://www.hindustanpetroleum.com/"],["HP GAS Official Website","https://www.hindustanpetroleum.com/"],["PMUY Official Website","https://pmuy.gov.in/"],["KYC APP For Android","https://play.google.com/"],["Face RD App","https://play.google.com/"],["KYC Video Hindi","https://youtube.com/"],["New KYC Form","https://www.hindustanpetroleum.com/","orange"],["DBTL Form","https://www.hindustanpetroleum.com/","orange"],["Book Cylinder","https://www.hindustanpetroleum.com/"],["Locate Distributor","https://www.hindustanpetroleum.com/"]],
+"BHARAT GAS":[["BOOK CYLINDER","https://www.bharatpetroleum.com/"],["Book & Pay Online","https://www.bharatpetroleum.com/"],["Check Gas Subsidy","https://www.bharatpetroleum.com/"],["Online Application Ujjwala","https://www.bharatpetroleum.com/"],["Find Your LPG ID","https://www.bharatpetroleum.com/"],["Bharat Gas Official Website","https://www.bharatpetroleum.com/"],["PMUY Official Website","https://pmuy.gov.in/"],["KYC APP For Android","https://play.google.com/"],["Face RD App","https://play.google.com/"],["KYC Video Hindi","https://youtube.com/"],["New KYC Form","https://www.bharatpetroleum.com/","orange"],["DBTL Form","https://www.bharatpetroleum.com/","orange"]],
+"Unique Disability ID...":[["Apply Online","https://www.swavlambancard.gov.in/"],["Track Application","https://www.swavlambancard.gov.in/"],["Login","https://www.swavlambancard.gov.in/"],["Official Website","https://www.swavlambancard.gov.in/"]],
+"Swachhbharatmi (शौचालय योजना)":[["Apply Online","https://swachhbharatmission.gov.in/"],["Login","https://swachhbharatmission.gov.in/"],["Track Application Status","https://swachhbharatmission.gov.in/"]],
+"Fancy Mobile Number":[["Fancy Number Booking","https://fancy.parivahan.gov.in/"]]
+};
+let active=null;
+function render(){
+ let g=document.getElementById('grid');g.innerHTML='';
+ Object.keys(DATA).forEach(k=>{
+  let c=document.createElement('div');c.className='card';if(active===k)c.classList.add('active');
+  let icon=k.includes('Driving')?'🪪':k.includes('RC Service')?'📒':k.includes('Vehicle')?'🚗':k.includes('Birth')?'📜':k.includes('Challan')?'🧾':k.includes('E-Shram')?'🪪':k.includes('APAAR')?'🆔':k.includes('ABHA')?'🪪':k.includes('Fasal')?'👨‍🌾':k.includes('PMAY')?'🏠':k.includes('EPFO')?'🛡️':k.includes('LIC')?'🤲':k.includes('E-NAM')?'🌱':k.includes('SVANidhi')?'🤝':k.includes('Soil')?'🌿':k.includes('MKisan')?'👨‍🌾':k.includes('Surya')?'☀️':k.includes('Udyam')?'🏭':k.includes('Scholarship')?'🎓':k.includes('Lost')?'📱':k.includes('Railway')?'🚂':k.includes('Passport')?'🛂':k.includes('Kisan')?'👨‍🌾':k.includes('GST')?'🧾':k.includes('Chackpost')?'🚧':k.includes('Vahan Green')?'🚗':k.includes('PUC')?'🏅':k.includes('Payments')?'💸':k.includes('Consumer')?'👨‍👩‍👧':k.includes('Career')?'🧑‍💼':k.includes('CIBIL')?'📊':k.includes('INDANE')?'⛽':k.includes('HP GAS')?'⛽':k.includes('BHARAT')?'⛽':k.includes('Disability')?'♿':k.includes('Swachh')?'🚽':k.includes('Fancy')?'👑':'🔗';
+  c.innerHTML='<div class="ico">'+icon+'</div><h3>'+k+'</h3>';
+  c.onclick=()=>toggle(k,c);
+  g.appendChild(c);
+ });
+}
+function toggle(key,el){
+ let grid=document.getElementById('grid');
+ let existing=document.querySelector('.expand');
+ if(active===key){if(existing)existing.remove();active=null;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));return;}
+ if(existing)existing.remove();
+ document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
+ el.classList.add('active');active=key;
+ let items=DATA[key]||[];
+ let row=document.createElement('div');row.className='expand';
+ let html='<div class="expand-head"><span>'+key+'</span><span class="close" onclick="closeExpand()">✕</span></div><div class="subgrid">';
+ items.forEach(([name,link,ty])=>{
+  let orange=ty==='orange'?' orange':'';let icon=orange?'📄':'↗';
+  html+='<a class="sub'+orange+'" href="'+link+'" target="_blank"><span class="i">'+icon+'</span><span>'+name+'</span></a>';
+ });
+ html+='</div>';row.innerHTML=html;
+ let cards=Array.from(grid.children).filter(e=>!e.classList.contains('expand'));
+ let idx=cards.indexOf(el);
+ let cols=window.innerWidth<=900?3:6;
+ let rowEnd=Math.ceil((idx+1)/cols)*cols;
+ let before=grid.children[rowEnd]||null;
+ grid.insertBefore(row,before);
+ row.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function closeExpand(){let e=document.querySelector('.expand');if(e)e.remove();active=null;document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));}
+render();
+</script>
+</body>
+  </html>
