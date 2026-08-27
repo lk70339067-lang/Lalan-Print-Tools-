@@ -1,33 +1,72 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AK Tools by Lalan - Photo Wala Fixed</title>
-<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f1f5f9}.top{background:#0f172a;color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:10}.top b{font-size:18px}.top span{color:#22c55e;font-size:11px;display:block}.wrap{max-width:1200px;margin:auto;padding:10px 10px 80px}.sec{font-weight:800;font-size:13px;margin:16px 0 8px;border-left:4px solid #ec4899;padding-left:8px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}@media(min-width:600px){.grid{grid-template-columns:repeat(4,1fr)}}.card{background:#fff;border:1.5px solid #dcfce7;border-radius:14px;padding:12px 4px;text-align:center;min-height:95px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-decoration:none;color:#1e293b;box-shadow:0 2px 6px rgba(0,0,0,.05);cursor:pointer}.ico{font-size:30px}.card h3{font-size:10px;margin-top:6px;font-weight:700}.expand{grid-column:1/-1;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:12px;margin:6px 0}.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.sub{background:#f8fafc;border:1px solid #e2e8f0;padding:10px;border-radius:8px;font-size:10px;font-weight:600;text-decoration:none;color:#334155;display:block}</style></head><body>
-<div class="top"><b>AK Tools by Lalan - Maner Patna</b><span>164+ Portal - Photo Ke Sath - Fixed</span></div>
-<div class="wrap">
-<div class="sec">Direct Links - Photo Ke Sath (30 Links)</div>
-<div class="grid" id="simpleGrid"></div>
-<div class="sec">Category Wise - Folder Me Andar Links (11 Links)</div>
-<div class="grid" id="grid"></div>
-</div>
-<script>
-var SIMPLE=[
-["PM SVANidhi","🤝","https://pmsvanidhi.mohua.gov.in"],["PM Surya Ghar","☀️","https://pmsuryaghar.gov.in"],["Udyam Aadhaar","🏭","https://udyamregistration.gov.in"],["National Scholarship","🎓","https://scholarships.gov.in"],["Railway Service","🚂","https://www.irctc.co.in"],["Passport Seva","🛂","https://portal2.passportindia.gov.in"],["GST Verification","🧾","https://services.gst.gov.in"],["PUC Service","🏅","https://puc.parivahan.gov.in"],["Income Tax","💰","https://www.incometax.gov.in"],["DigiLocker","🔐","https://www.digilocker.gov.in"],["UMANG App","📱","https://web.umang.gov.in"],["PFMS","🏦","https://pfms.nic.in"],["NREGA Job Card","👷","https://nrega.nic.in"],["PM Kisan","🌾","https://pmkisan.gov.in"],["E-District Bihar","🏛️","https://edistrict.bih.nic.in"],["Bihar Bhumi","🌱","https://biharbhumi.bihar.gov.in"],["Bihar Ration Card","🍚","https://epds.bihar.gov.in"],["Post Office","📮","https://www.indiapost.gov.in"],["CSC Service","🏪","https://csc.gov.in"],["Aadhar PVC Order","🆔","https://myaadhaar.uidai.gov.in/genricPVC"],["Voter List","🗳️","https://electoralsearch.eci.gov.in"],["GST Return","📑","https://www.gst.gov.in"],["NPS","👴","https://www.npscra.nsdl.co.in"],["LPG Gas Booking","⛽","https://www.mylpg.in"],["IRCTC PNR","🎫","https://www.irctc.co.in"],["E-Hospital","🏥","https://www.ehospital.gov.in"],["CoWIN Vaccine","💉","https://www.cowin.gov.in"],["RTI","📄","https://rtionline.gov.in"],["CPGRAMS Complaint","📢","https://pgportal.gov.in"]
-];
-var DATA={
-"EPFO":[["UAN Login","https://unifiedportal-mem.epfindia.gov.in/"],["Passbook","https://passbook.epfindia.gov.in/"]],
-"PM Surya Ghar":[["Apply","https://pmsuryaghar.gov.in/"],["Benefits","https://pmsuryaghar.gov.in/"]],
-"Railway":[["PNR Check","https://www.indianrail.gov.in/"],["Train Check","https://enquiry.indianrail.gov.in/"]],
-"Passport Seva":[["Login","https://portal2.passportindia.gov.in/"],["Apply","https://portal2.passportindia.gov.in/"]],
-"PM Kisan":[["Status Check","https://pmkisan.gov.in/"],["KYC","https://pmkisan.gov.in/"]],
-"INDANE GAS":[["Subsidy Check","https://indane.co.in/"],["Ujjwala Apply","https://indane.co.in/"]],
-"HP GAS":[["Subsidy Check","https://www.hindustanpetroleum.com/"],["Book Cylinder","https://www.hindustanpetroleum.com/"]],
-"BHARAT GAS":[["Book Cylinder","https://www.bharatpetroleum.com/"],["Subsidy Check","https://www.bharatpetroleum.com/"]],
-"Disability ID":[["Apply Online","https://www.swavlambancard.gov.in/"]],
-"Swachh Bharat":[["Apply Online","https://swachhbharatmission.gov.in/"]],
-"Fancy Number":[["Fancy Booking","https://fancy.parivahan.gov.in/"]]
-};
-var active=null;
-function renderSimple(){var g=document.getElementById('simpleGrid');g.innerHTML='';for(var i=0;i<SIMPLE.length;i++){var n=SIMPLE[i][0];var ic=SIMPLE[i][1];var l=SIMPLE[i][2];var a=document.createElement('a');a.className='card';a.href=l;a.target='_blank';a.innerHTML='<div class=ico>'+ic+'</div><h3>'+n+'</h3>';g.appendChild(a);}}
-var grid=document.getElementById('grid');
-function render(){grid.innerHTML='';var keys=Object.keys(DATA);for(var k=0;k<keys.length;k++){var key=keys[k];var d=document.createElement('div');d.className='card';var ico='📁';if(key.indexOf('EPFO')>-1)ico='🛡️';else if(key.indexOf('Surya')>-1)ico='☀️';else if(key.indexOf('Railway')>-1)ico='🚂';else if(key.indexOf('Passport')>-1)ico='🛂';else if(key.indexOf('Kisan')>-1)ico='🌾';else if(key.indexOf('GAS')>-1)ico='⛽';else if(key.indexOf('Disability')>-1)ico='♿';else if(key.indexOf('Swachh')>-1)ico='🚽';else if(key.indexOf('Fancy')>-1)ico='👑';d.innerHTML='<div class=ico>'+ico+'</div><h3>'+key+'</h3>';(function(key){d.onclick=function(){openBox(key)}})(key);grid.appendChild(d);}}
-function openBox(k){var old=document.querySelector('.expand');if(active===k){if(old)old.remove();active=null;render();return;}if(old)old.remove();active=k;render();var cards=document.querySelectorAll('#grid.card');var idx=-1;for(var i=0;i<cards.length;i++){if(cards[i].textContent.indexOf(k)>-1){idx=i;break;}}var box=document.createElement('div');box.className='expand';var html='<div style=display:flex;justify-content:space-between;font-weight:800;font-size:12px'><span>'+k+'</span><span onclick="this.parentElement.parentElement.remove();active=null;render()" style=cursor:pointer;background:#fff;border:1px solid #ddd;border-radius:6px;padding:2px 8px>X</span></div><div class=subgrid>';var items=DATA[k];for(var j=0;j<items.length;j++){html+='<a class=sub href='+items[j][1]+' target=_blank>'+items[j][0]+'</a>';}html+='</div>';box.innerHTML=html;var cols=window.innerWidth<600?2:4;var pos=Math.ceil((idx+1)/cols)*cols;var ref=grid.children[pos]||null;grid.insertBefore(box,ref);}
-renderSimple();render();
-</script></body></html>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AK Tools by Lalan - All Services One Touch</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#f8fafc;display:flex;min-height:100vh}.side{width:230px;background:#fff;border-right:1px solid #e2e8f0;padding:14px;position:sticky;top:0;height:100vh;overflow:auto}.side b{color:#0ea5e9;font-size:20px;display:block;margin-bottom:18px}.side .label{font-size:10px;font-weight:800;color:#94a3b8;margin:14px 0 6px}.side a{display:flex;gap:10px;padding:9px 10px;border-radius:8px;text-decoration:none;color:#475569;font-size:13px;cursor:pointer}.side a.active{background:#e0f2fe;color:#0284c7;font-weight:700}.main{flex:1;min-width:0}.topbar{background:#fff;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:10}.badge{background:#1e293b;color:#fff;padding:7px 14px;border-radius:8px;font-size:12px;font-weight:800}.content{padding:18px}.title{font-size:24px;font-weight:900}.sub{font-size:12px;color:#ef4444;margin:6px 0 18px}.sec-title{font-size:15px;font-weight:800;margin:22px 0 12px;padding-left:10px;border-left:4px solid #0ea5e9}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:768px){.grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:1100px){.grid{grid-template-columns:repeat(5,1fr)}}.card{background:#fff;border:1px solid #f1f5f9;border-radius:18px;padding:14px 8px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.04);text-decoration:none;color:#334155;transition:.2s;display:flex;flex-direction:column;align-items:center}.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}.icon-wrap{width:96px;height:96px;border-radius:22px;display:flex;align-items:center;justify-content:center;position:relative}.icon-wrap::after{content:'';position:absolute;inset:8px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 1px #e2e8f0}.c1{background:#fef9e7}.c2{background:#fff7ed}.c3{background:#f0fdf4}.c4{background:#fef2f2}.c5{background:#fdf2f8}.c6{background:#eff6ff}.c8{background:#fffbeb}.ico{font-size:38px;z-index:1}.card h3{font-size:11px;font-weight:700;margin-top:10px;line-height:1.25;color:#1e293b}@media(max-width:650px){.side{display:none}.icon-wrap{width:82px;height:82px}.ico{font-size:30px}.content{padding:12px}}</style></head><body>
+<div class="side"><b>🕊️ One Touch</b><a>🏠 Dashboard</a><a>👤 User Management</a><a>💼 Add Wallet</a><div class="label">SERVICES</div><a onclick="show('aadhaar')">🌞 Aadhaar Services</a><a class="active" onclick="show('pan')">💳 Pan Card Services</a><a onclick="show('vahan')">🚗 Vachile Services</a><a onclick="show('voter')">🪪 Voter Services</a><a onclick="show('ration')">🍚 Ration Services</a><a onclick="show('bill')">💡 ElectriBill</a><a onclick="show('farmer')">🌾 Farmer Services</a><a onclick="show('other')">📦 Other Services</a><div class="label">AK TOOLS</div><a onclick="show('pm')">🏛️ PM Yojana</a><a onclick="show('bihar')">📍 Bihar Services</a></div>
+<div class="main"><div class="topbar"><div style="font-size:12px;color:#64748b">AK Tools by Lalan - Maner Patna | 164+ Portal</div><div class="badge">₹147979.11 • AK Tools</div></div>
+<div class="content"><div class="title" id="pageTitle">Pan Services</div><div class="sub">All essential services in one place - fast, secure, easy! All 164+ included.</div>
+
+<div id="pan"><div class="sec-title">💳 Pan Card Services - 8 Services</div><div class="grid">
+<a class="card" href="https://www.tin-nsdl.com/services/pan/" target="_blank"><div class="icon-wrap c1"><div class="ico">💳</div></div><h3>Pan Number Find S1</h3></a>
+<a class="card" href="https://www.tin-nsdl.com/services/pan/" target="_blank"><div class="icon-wrap c2"><div class="ico">🔍</div></div><h3>Pan Number Find S2</h3></a>
+<a class="card" href="#"><div class="icon-wrap c3"><div class="ico">📱</div></div><h3>Mobile To Pan Find</h3></a>
+<a class="card" href="#"><div class="icon-wrap c4"><div class="ico">🖨️</div></div><h3>Pan Advance Print</h3></a>
+<a class="card" href="#"><div class="icon-wrap c4"><div class="ico">🪪</div></div><h3>Pan Manual Print</h3></a>
+<a class="card" href="#"><div class="icon-wrap c6"><div class="ico">🔗</div></div><h3>Pan To Aadhaar Number</h3></a>
+<a class="card" href="#"><div class="icon-wrap c1"><div class="ico">📄</div></div><h3>Pan Details Find</h3></a>
+<a class="card" href="https://services.gst.gov.in/" target="_blank"><div class="icon-wrap c8"><div class="ico">🧾</div></div><h3>Gst Details Find</h3></a>
+</div></div>
+
+<div id="aadhaar"><div class="sec-title">🌞 Aadhaar Services - 12 Services</div><div class="grid">
+<a class="card" href="https://myaadhaar.uidai.gov.in/" target="_blank"><div class="icon-wrap c3"><div class="ico">🆔</div></div><h3>Aadhaar Download</h3></a>
+<a class="card" href="https://myaadhaar.uidai.gov.in/check-aadhaar-validity" target="_blank"><div class="icon-wrap c6"><div class="ico">✅</div></div><h3>Aadhaar Verify</h3></a>
+<a class="card" href="https://myaadhaar.uidai.gov.in/genricPVC" target="_blank"><div class="icon-wrap c1"><div class="ico">💳</div></div><h3>Aadhaar PVC Order</h3></a>
+<a class="card" href="https://uidai.gov.in/" target="_blank"><div class="icon-wrap c5"><div class="ico">🏠</div></div><h3>Address Update</h3></a>
+<a class="card" href="https://myaadhaar.uidai.gov.in/" target="_blank"><div class="icon-wrap c5"><div class="ico">🔗</div></div><h3>Mobile To Aadhaar</h3></a>
+<a class="card" href="https://www.digilocker.gov.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🔐</div></div><h3>DigiLocker Aadhaar</h3></a>
+</div></div>
+
+<div id="vahan"><div class="sec-title">🚗 Vachile / Parivahan - 10 Services</div><div class="grid">
+<a class="card" href="https://vahan.parivahan.gov.in/" target="_blank"><div class="icon-wrap c2"><div class="ico">🚗</div></div><h3>RC Details Find</h3></a>
+<a class="card" href="https://parivahan.gov.in/" target="_blank"><div class="icon-wrap c1"><div class="ico">🪪</div></div><h3>DL Details Find</h3></a>
+<a class="card" href="https://puc.parivahan.gov.in/" target="_blank"><div class="icon-wrap c3"><div class="ico">🏅</div></div><h3>PUC Check</h3></a>
+<a class="card" href="https://fancy.parivahan.gov.in/" target="_blank"><div class="icon-wrap c5"><div class="ico">👑</div></div><h3>Fancy Number</h3></a>
+<a class="card" href="https://vahan.parivahan.gov.in/" target="_blank"><div class="icon-wrap c4"><div class="ico">💰</div></div><h3>Road Tax Pay</h3></a>
+</div></div>
+
+<div id="voter"><div class="sec-title">🪪 Voter Services</div><div class="grid">
+<a class="card" href="https://electoralsearch.eci.gov.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🗳️</div></div><h3>Voter List Search</h3></a>
+<a class="card" href="https://voters.eci.gov.in/" target="_blank"><div class="icon-wrap c2"><div class="ico">📝</div></div><h3>New Voter Apply</h3></a>
+<a class="card" href="https://voters.eci.gov.in/" target="_blank"><div class="icon-wrap c1"><div class="ico">🖨️</div></div><h3>Voter Card Print</h3></a>
+</div></div>
+
+<div id="ration"><div class="sec-title">🍚 Ration Services</div><div class="grid">
+<a class="card" href="https://epds.bihar.gov.in/" target="_blank"><div class="icon-wrap c4"><div class="ico">🍚</div></div><h3>Bihar Ration Card</h3></a>
+<a class="card" href="https://nfsa.gov.in/" target="_blank"><div class="icon-wrap c1"><div class="ico">📋</div></div><h3>Ration List Check</h3></a>
+</div></div>
+
+<div id="pm"><div class="sec-title">🏛️ PM Yojana - All 30 Direct Links</div><div class="grid">
+<a class="card" href="https://pmsvanidhi.mohua.gov.in/" target="_blank"><div class="icon-wrap c1"><div class="ico">🤝</div></div><h3>PM SVANidhi</h3></a>
+<a class="card" href="https://pmsuryaghar.gov.in/" target="_blank"><div class="icon-wrap c2"><div class="ico">☀️</div></div><h3>PM Surya Ghar</h3></a>
+<a class="card" href="https://udyamregistration.gov.in/" target="_blank"><div class="icon-wrap c3"><div class="ico">🏭</div></div><h3>Udyam Aadhaar</h3></a>
+<a class="card" href="https://scholarships.gov.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🎓</div></div><h3>National Scholarship</h3></a>
+<a class="card" href="https://www.irctc.co.in/" target="_blank"><div class="icon-wrap c2"><div class="ico">🚂</div></div><h3>Railway Service</h3></a>
+<a class="card" href="https://portal2.passportindia.gov.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🛂</div></div><h3>Passport Seva</h3></a>
+<a class="card" href="https://services.gst.gov.in/" target="_blank"><div class="icon-wrap c8"><div class="ico">🧾</div></div><h3>GST Verification</h3></a>
+<a class="card" href="https://www.incometax.gov.in/" target="_blank"><div class="icon-wrap c4"><div class="ico">💰</div></div><h3>Income Tax</h3></a>
+<a class="card" href="https://www.digilocker.gov.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🔐</div></div><h3>DigiLocker</h3></a>
+<a class="card" href="https://www.mylpg.in/" target="_blank"><div class="icon-wrap c2"><div class="ico">⛽</div></div><h3>LPG Gas Booking</h3></a>
+<a class="card" href="https://unifiedportal-mem.epfindia.gov.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🛡️</div></div><h3>EPFO UAN</h3></a>
+<a class="card" href="https://biharbhumi.bihar.gov.in/" target="_blank"><div class="icon-wrap c3"><div class="ico">🌾</div></div><h3>Bihar Bhumi</h3></a>
+<a class="card" href="https://edistrict.bih.nic.in/" target="_blank"><div class="icon-wrap c6"><div class="ico">🏛️</div></div><h3>RTPS Bihar</h3></a>
+</div></div>
+
+<div id="other"><div class="sec-title">📦 Other Services</div><div class="grid">
+<a class="card" href="https://www.gst.gov.in/" target="_blank"><div class="icon-wrap c8"><div class="ico">📑</div></div><h3>GST Return</h3></a>
+<a class="card" href="https://indane.co.in/" target="_blank"><div class="icon-wrap c2"><div class="ico">🔥</div></div><h3>INDANE Gas</h3></a>
+<a class="card" href="https://www.hindustanpetroleum.com/" target="_blank"><div class="icon-wrap c4"><div class="ico">⛽</div></div><h3>HP Gas</h3></a>
+<a class="card" href="https://www.bharatpetroleum.com/" target="_blank"><div class="icon-wrap c1"><div class="ico">🛢️</div></div><h3>Bharat Gas</h3></a>
+<a class="card" href="https://www.swavlambancard.gov.in/" target="_blank"><div class="icon-wrap c5"><div class="ico">♿</div></div><h3>Disability ID</h3></a>
+<a class="card" href="https://swachhbharatmission.gov.in/" target="_blank"><div class="icon-wrap c3"><div class="ico">🚽</div></div><h3>Swachh Bharat</h3></a>
+</div></div>
+<br><div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;text-align:center;font-size:12px">© 2026 AK Print Hub - Maner Patna | One Touch Style - All 164+ Services | by Lalan</div>
+</div></div>
+<script>function show(id){document.getElementById('pageTitle').innerText=id.toUpperCase()+' Services';window.scrollTo({top:document.getElementById(id).offsetTop-80,behavior:'smooth'});}</script></body></html>
